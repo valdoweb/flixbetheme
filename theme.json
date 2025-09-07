@@ -202,7 +202,7 @@
     }
   ],
   "patterns": [
-    "minimalis/hero",
-    "minimalis/call-to-action"
+    "flixbe/hero",
+    "flixbe/call-to-action"
   ]
 }

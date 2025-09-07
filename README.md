@@ -1,36 +1,63 @@
 
-# FlixbeHospitality — Minimal Block Theme
+=== Flixbe ===
+Contributors: valdoweb
+Requires at least: 6.0
+Tested up to: 6.4
+Requires PHP: 7.4
+Stable tag: 1.0.0
+License: GPLv2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Tags: blog, one-column, accessibility-ready, block-styles, full-site-editing, custom-background, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, wide-blocks
 
-**Requirements:** WordPress 6.6+, PHP 7.4+
+A minimal WordPress block theme with modern styling, accessibility features, and Full Site Editing support.
 
-## Quick Installation
-1. Download this theme as a ZIP file.
-2. Go to **Appearance → Themes → Add New → Upload Theme** and upload the ZIP.
-3. Activate **FlixbeHospitality**, then open the **Site Editor** to customize colors, typography, layouts, and patterns.
+== Description ==
 
-## Theme Structure
-- `theme.json` — Defines the design system (colors, typography, spacing, layout) and registers template parts and patterns.
-- `templates/` — Block-based HTML templates (home, index, page, single, 404).
-- `parts/` — Reusable template parts for header and footer.
-- `patterns/` — Ready-to-use block patterns (hero, call-to-action).
-- `style.css` — Theme metadata and custom CSS enhancements.
-- `functions.php` — Theme functions and WordPress hooks.
+Flixbe is a clean and minimal WordPress block theme designed for Full Site Editing (FSE). Perfect for blogs, business sites, and portfolios, it features modern gradient styling, smooth animations, and comprehensive accessibility support.
 
-## Features
-- **Full Site Editing (FSE)** support with block-based templates
-- **Modern gradient styling** with smooth animations and hover effects
-- **Responsive design** that works on all devices
-- **Accessibility-ready** with proper focus states and semantic markup
-- **Customizable color palette** and typography through the Site Editor
-- **Card-style post layouts** with elegant hover animations
-- **Sticky header** with backdrop blur effect
-- **Clean, minimal design** perfect for blogs and business sites
+Key features:
+* Full Site Editing (FSE) support with block-based templates
+* Modern gradient styling with smooth animations and hover effects
+* Responsive design that works on all devices
+* Accessibility-ready with proper focus states and semantic markup
+* Customizable color palette and typography through the Site Editor
+* Card-style post layouts with elegant hover animations
+* Sticky header with backdrop blur effect
+* Clean, minimal design perfect for blogs and business sites
 
-## Customization Tips
-- Customize colors and fonts through `theme.json` without touching CSS.
-- Add new patterns by creating `.html` files in `patterns/` with proper headers (Title, Slug, Categories).
-- Keep the theme "PHP-free" when possible: leverage core blocks and the Site Editor.
-- Use the Site Editor to modify layouts, add blocks, and create custom page designs.
+== Installation ==
 
-## Development
-This theme follows WordPress Full Site Editing standards and is designed to work seamlessly with the block editor. All styling is enhanced through modern CSS with gradients, animations, and responsive design principles.
+1. In your WordPress admin panel, go to Appearance -> Themes and click Add New
+2. Click Upload Theme and select the theme's zip file
+3. Click Install Now
+4. Click Activate to use your new theme
+
+== Customization ==
+
+This theme supports Full Site Editing, allowing you to customize your site using the WordPress Site Editor. You can modify colors, typography, layouts, and add custom patterns directly from the editor.
+
+Customize colors and fonts through theme.json without touching CSS. Add new patterns by creating .html files in patterns/ with proper headers.
+
+== Changelog ==
+
+= 1.0.0 =
+* Initial release
+* Full Site Editing support
+* Responsive design
+* Accessibility features
+* Block patterns included
+
+== Copyright ==
+
+Flixbe WordPress Theme, Copyright 2024 Valdoweb
+Flixbe is distributed under the terms of the GNU GPL
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.

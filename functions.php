@@ -1,23 +1,35 @@
 <?php
 /**
- * Minimalis functions and definitions.
- * Intentionally minimal: the theme uses block templates and theme.json.
- * Add your custom PHP here only if strictly necessary.
+ * Flixbe functions and definitions.
+ *
+ * @link https://developer.wordpress.org/themes/basics/theme-functions/
+ *
+ * @package Flixbe
+ * @since 1.0.0
  */
 
-// Enqueue theme styles
-function flixbe_hospitality_enqueue_styles() {
+// Prevent direct access
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+
+/**
+ * Enqueue theme styles
+ */
+function flixbe_enqueue_styles() {
     wp_enqueue_style(
-        'flixbe-hospitality-style',
+        'flixbe-style',
         get_stylesheet_uri(),
         array(),
         wp_get_theme()->get('Version')
     );
 }
-add_action('wp_enqueue_scripts', 'flixbe_hospitality_enqueue_styles');
+add_action('wp_enqueue_scripts', 'flixbe_enqueue_styles');
 
-// Add theme support for various WordPress features
-function flixbe_hospitality_theme_support() {
+/**
+ * Add theme support for various WordPress features
+ */
+function flixbe_theme_support() {
     // Add support for block styles
     add_theme_support('wp-block-styles');
     
@@ -32,11 +44,36 @@ function flixbe_hospitality_theme_support() {
     
     // Let WordPress manage the document title
     add_theme_support('title-tag');
+    
+    // Add theme support for post thumbnails
+    add_theme_support('post-thumbnails');
+    
+    // Add support for automatic feed links
+    add_theme_support('automatic-feed-links');
+    
+    // Add support for HTML5 markup
+    add_theme_support('html5', array(
+        'comment-list',
+        'comment-form',
+        'search-form',
+        'gallery',
+        'caption',
+    ));
+    
+    // Add support for custom logo
+    add_theme_support('custom-logo', array(
+        'height'      => 100,
+        'width'       => 400,
+        'flex-height' => true,
+        'flex-width'  => true,
+    ));
 }
-add_action('after_setup_theme', 'flixbe_hospitality_theme_support');
+add_action('after_setup_theme', 'flixbe_theme_support');
 
-// Add mobile menu script inline to avoid external file
-function flixbe_hospitality_inline_mobile_menu_script() {
+/**
+ * Add mobile menu script inline to avoid external file
+ */
+function flixbe_inline_mobile_menu_script() {
     ?>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -157,16 +194,18 @@ function flixbe_hospitality_inline_mobile_menu_script() {
     </script>
     <?php
 }
-add_action('wp_footer', 'flixbe_hospitality_inline_mobile_menu_script');
+add_action('wp_footer', 'flixbe_inline_mobile_menu_script');
 
-// Register custom block styles
-function flixbe_hospitality_register_block_styles() {
+/**
+ * Register custom block styles
+ */
+function flixbe_register_block_styles() {
     // Register full-screen group styles
     register_block_style(
         'core/group',
         array(
             'name'  => 'fullscreen',
-            'label' => __('Full Screen', 'flixbe-hospitality'),
+            'label' => __('Full Screen', 'flixbe'),
         )
     );
     
@@ -174,7 +213,7 @@ function flixbe_hospitality_register_block_styles() {
         'core/group',
         array(
             'name'  => 'fullscreen-width',
-            'label' => __('Full Width', 'flixbe-hospitality'),
+            'label' => __('Full Width', 'flixbe'),
         )
     );
     
@@ -182,7 +221,7 @@ function flixbe_hospitality_register_block_styles() {
         'core/group',
         array(
             'name'  => 'fullscreen-height',
-            'label' => __('Full Height', 'flixbe-hospitality'),
+            'label' => __('Full Height', 'flixbe'),
         )
     );
     
@@ -190,8 +229,8 @@ function flixbe_hospitality_register_block_styles() {
         'core/group',
         array(
             'name'  => 'full-viewport',
-            'label' => __('Edge to Edge', 'flixbe-hospitality'),
+            'label' => __('Edge to Edge', 'flixbe'),
         )
     );
 }
-add_action('init', 'flixbe_hospitality_register_block_styles');
+add_action('init', 'flixbe_register_block_styles');
