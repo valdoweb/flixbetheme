@@ -337,6 +337,77 @@ main.wp-block-group > .wp-block-post-content:first-child {
   padding-top: 0;
 }
 
+/* Ensure standalone elements respect site margins */
+main > .wp-block-heading:not(.alignwide):not(.alignfull),
+main > .wp-block-paragraph:not(.alignwide):not(.alignfull),
+main > .wp-block-list:not(.alignwide):not(.alignfull),
+main > .wp-block-quote:not(.alignwide):not(.alignfull),
+main > .wp-block-image:not(.alignwide):not(.alignfull),
+main > .wp-block-table:not(.alignwide):not(.alignfull),
+main > .wp-block-columns:not(.alignwide):not(.alignfull),
+main > .wp-block-media-text:not(.alignwide):not(.alignfull),
+.wp-block-post-content > .wp-block-heading:not(.alignwide):not(.alignfull),
+.wp-block-post-content > .wp-block-paragraph:not(.alignwide):not(.alignfull),
+.wp-block-post-content > .wp-block-list:not(.alignwide):not(.alignfull),
+.wp-block-post-content > .wp-block-quote:not(.alignwide):not(.alignfull),
+.wp-block-post-content > .wp-block-image:not(.alignwide):not(.alignfull),
+.wp-block-post-content > .wp-block-table:not(.alignwide):not(.alignfull),
+.wp-block-post-content > .wp-block-columns:not(.alignwide):not(.alignfull),
+.wp-block-post-content > .wp-block-media-text:not(.alignwide):not(.alignfull) {
+  max-width: var(--wp--style--global--content-size, 1000px);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Wide alignment elements should respect wide size */
+main > .wp-block-heading.alignwide,
+main > .wp-block-paragraph.alignwide,
+main > .wp-block-list.alignwide,
+main > .wp-block-quote.alignwide,
+main > .wp-block-image.alignwide,
+main > .wp-block-table.alignwide,
+main > .wp-block-columns.alignwide,
+main > .wp-block-media-text.alignwide,
+.wp-block-post-content > .wp-block-heading.alignwide,
+.wp-block-post-content > .wp-block-paragraph.alignwide,
+.wp-block-post-content > .wp-block-list.alignwide,
+.wp-block-post-content > .wp-block-quote.alignwide,
+.wp-block-post-content > .wp-block-image.alignwide,
+.wp-block-post-content > .wp-block-table.alignwide,
+.wp-block-post-content > .wp-block-columns.alignwide,
+.wp-block-post-content > .wp-block-media-text.alignwide {
+  max-width: var(--wp--style--global--wide-size, 1400px);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Full alignment elements can be full width */
+main > .wp-block-heading.alignfull,
+main > .wp-block-paragraph.alignfull,
+main > .wp-block-list.alignfull,
+main > .wp-block-quote.alignfull,
+main > .wp-block-image.alignfull,
+main > .wp-block-table.alignfull,
+main > .wp-block-columns.alignfull,
+main > .wp-block-media-text.alignfull,
+.wp-block-post-content > .wp-block-heading.alignfull,
+.wp-block-post-content > .wp-block-paragraph.alignfull,
+.wp-block-post-content > .wp-block-list.alignfull,
+.wp-block-post-content > .wp-block-quote.alignfull,
+.wp-block-post-content > .wp-block-image.alignfull,
+.wp-block-post-content > .wp-block-table.alignfull,
+.wp-block-post-content > .wp-block-columns.alignfull,
+.wp-block-post-content > .wp-block-media-text.alignfull {
+  width: 100vw;
+  max-width: none;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
 /* Desktop styles - hide mobile menu */
 @media (min-width: 769px) {
   .mobile-menu-toggle {
