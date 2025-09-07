@@ -1,0 +1,33 @@
+<!-- Skip to main content link for keyboard users -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- wp:group {"style":{"spacing":{"padding":{"right":"1rem","left":"1rem"}}},"layout":{"type":"flex","justifyContent":"space-between","flexWrap":"wrap"}} -->
+<div id="site-header" class="wp-block-group" role="banner" style="padding-right:1rem;padding-left:1rem">
+  <!-- wp:site-title {"level":1} /-->
+  
+  <!-- Mobile Menu Button -->
+  <button 
+    id="mobile-menu-toggle" 
+    class="mobile-menu-toggle" 
+    aria-label="Open mobile navigation menu" 
+    aria-expanded="false"
+    aria-controls="mobile-navigation"
+    type="button">
+    <span class="burger-line" aria-hidden="true"></span>
+    <span class="burger-line" aria-hidden="true"></span>
+    <span class="burger-line" aria-hidden="true"></span>
+    <span class="sr-only">Menu</span>
+  </button>
+  
+  <!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","justifyContent":"right","orientation":"horizontal"},"className":"desktop-navigation","ariaLabel":"Main navigation"} /-->
+  
+  <!-- Mobile Navigation Overlay -->
+  <nav 
+    id="mobile-navigation" 
+    class="mobile-navigation" 
+    aria-hidden="true"
+    aria-label="Mobile navigation">
+    <!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","flexWrap":"nowrap","orientation":"vertical"},"className":"mobile-nav-menu","ariaLabel":"Mobile navigation menu"} /-->
+  </nav>
+</div>
+<!-- /wp:group -->

@@ -1,0 +1,197 @@
+<?php
+/**
+ * Minimalis functions and definitions.
+ * Intentionally minimal: the theme uses block templates and theme.json.
+ * Add your custom PHP here only if strictly necessary.
+ */
+
+// Enqueue theme styles
+function flixbe_hospitality_enqueue_styles() {
+    wp_enqueue_style(
+        'flixbe-hospitality-style',
+        get_stylesheet_uri(),
+        array(),
+        wp_get_theme()->get('Version')
+    );
+}
+add_action('wp_enqueue_scripts', 'flixbe_hospitality_enqueue_styles');
+
+// Add theme support for various WordPress features
+function flixbe_hospitality_theme_support() {
+    // Add support for block styles
+    add_theme_support('wp-block-styles');
+    
+    // Add support for responsive embeds
+    add_theme_support('responsive-embeds');
+    
+    // Add support for editor styles
+    add_theme_support('editor-styles');
+    
+    // Add support for wide alignment
+    add_theme_support('align-wide');
+    
+    // Let WordPress manage the document title
+    add_theme_support('title-tag');
+}
+add_action('after_setup_theme', 'flixbe_hospitality_theme_support');
+
+// Add mobile menu script inline to avoid external file
+function flixbe_hospitality_inline_mobile_menu_script() {
+    ?>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileToggle = document.getElementById('mobile-menu-toggle');
+        const mobileNav = document.getElementById('mobile-navigation');
+        
+        if (mobileToggle && mobileNav) {
+            // Set initial states
+            mobileNav.setAttribute('aria-hidden', 'true');
+            mobileToggle.setAttribute('aria-expanded', 'false');
+            mobileNav.classList.remove('active');
+            mobileToggle.classList.remove('active');
+            
+            function toggleMenu() {
+                const isExpanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+                const newState = !isExpanded;
+                
+                // Update ARIA states
+                mobileToggle.setAttribute('aria-expanded', newState);
+                mobileNav.setAttribute('aria-hidden', !newState);
+                
+                // Update button label
+                mobileToggle.setAttribute('aria-label', newState ? 'Close mobile navigation menu' : 'Open mobile navigation menu');
+                
+                // Toggle active classes
+                if (newState) {
+                    mobileToggle.classList.add('active');
+                    mobileNav.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                    
+                    // Focus first menu item after animation
+                    setTimeout(() => {
+                        const firstMenuItem = mobileNav.querySelector('a');
+                        if (firstMenuItem) {
+                            firstMenuItem.focus();
+                        }
+                    }, 100);
+                } else {
+                    closeMenu();
+                }
+            }
+            
+            mobileToggle.addEventListener('click', toggleMenu);
+            
+            // Handle keyboard navigation
+            mobileToggle.addEventListener('keydown', function(event) {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    this.click();
+                }
+            });
+            
+            // Handle escape key to close menu
+            document.addEventListener('keydown', function(event) {
+                if (event.key === 'Escape' && mobileNav.classList.contains('active')) {
+                    closeMenu();
+                    mobileToggle.focus();
+                }
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (mobileNav.classList.contains('active') && 
+                    !mobileToggle.contains(event.target) && 
+                    !mobileNav.contains(event.target)) {
+                    closeMenu();
+                }
+            });
+            
+            // Close menu on window resize if larger than mobile breakpoint
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) {
+                    closeMenu();
+                }
+            });
+            
+            // Close menu when clicking on menu links
+            const menuLinks = mobileNav.querySelectorAll('a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    closeMenu();
+                });
+            });
+            
+            function closeMenu() {
+                if (mobileNav.classList.contains('active')) {
+                    mobileToggle.classList.remove('active');
+                    mobileNav.classList.remove('active');
+                    mobileToggle.setAttribute('aria-expanded', 'false');
+                    mobileNav.setAttribute('aria-hidden', 'true');
+                    mobileToggle.setAttribute('aria-label', 'Open mobile navigation menu');
+                    document.body.style.overflow = '';
+                }
+            }
+            
+            // Trap focus within mobile menu when open
+            mobileNav.addEventListener('keydown', function(event) {
+                if (event.key === 'Tab') {
+                    const focusableElements = mobileNav.querySelectorAll('a, button, [tabindex]:not([tabindex="-1"])');
+                    const firstElement = focusableElements[0];
+                    const lastElement = focusableElements[focusableElements.length - 1];
+                    
+                    if (event.shiftKey) {
+                        if (document.activeElement === firstElement) {
+                            event.preventDefault();
+                            lastElement.focus();
+                        }
+                    } else {
+                        if (document.activeElement === lastElement) {
+                            event.preventDefault();
+                            firstElement.focus();
+                        }
+                    }
+                }
+            });
+        }
+    });
+    </script>
+    <?php
+}
+add_action('wp_footer', 'flixbe_hospitality_inline_mobile_menu_script');
+
+// Register custom block styles
+function flixbe_hospitality_register_block_styles() {
+    // Register full-screen group styles
+    register_block_style(
+        'core/group',
+        array(
+            'name'  => 'fullscreen',
+            'label' => __('Full Screen', 'flixbe-hospitality'),
+        )
+    );
+    
+    register_block_style(
+        'core/group',
+        array(
+            'name'  => 'fullscreen-width',
+            'label' => __('Full Width', 'flixbe-hospitality'),
+        )
+    );
+    
+    register_block_style(
+        'core/group',
+        array(
+            'name'  => 'fullscreen-height',
+            'label' => __('Full Height', 'flixbe-hospitality'),
+        )
+    );
+    
+    register_block_style(
+        'core/group',
+        array(
+            'name'  => 'full-viewport',
+            'label' => __('Edge to Edge', 'flixbe-hospitality'),
+        )
+    );
+}
+add_action('init', 'flixbe_hospitality_register_block_styles');

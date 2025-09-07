@@ -1,0 +1,208 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "appearanceTools": true,
+    "layout": {
+      "contentSize": "1000px",
+      "wideSize": "1400px"
+    },
+    "spacing": {
+      "units": [
+        "px",
+        "rem",
+        "em",
+        "vh",
+        "vw",
+        "%"
+      ]
+    },
+    "color": {
+      "palette": [
+        {
+          "slug": "bg",
+          "name": "Background",
+          "color": "#ffffff"
+        },
+        {
+          "slug": "fg",
+          "name": "Foreground",
+          "color": "#111111"
+        },
+        {
+          "slug": "muted",
+          "name": "Muted",
+          "color": "#6b7280"
+        },
+        {
+          "slug": "primary",
+          "name": "Primary",
+          "color": "#2563eb"
+        },
+        {
+          "slug": "accent",
+          "name": "Accent",
+          "color": "#10b981"
+        }
+      ],
+      "gradients": []
+    },
+    "typography": {
+      "fluid": true,
+      "fontFamilies": [
+        {
+          "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif",
+          "name": "System UI",
+          "slug": "system-ui"
+        }
+      ],
+      "fontSizes": [
+        {
+          "slug": "xs",
+          "size": "0.75rem",
+          "name": "XS"
+        },
+        {
+          "slug": "sm",
+          "size": "0.875rem",
+          "name": "SM"
+        },
+        {
+          "slug": "base",
+          "size": "1rem",
+          "name": "Base"
+        },
+        {
+          "slug": "lg",
+          "size": "1.125rem",
+          "name": "LG"
+        },
+        {
+          "slug": "xl",
+          "size": "1.25rem",
+          "name": "XL"
+        },
+        {
+          "slug": "2xl",
+          "size": "1.5rem",
+          "name": "2XL"
+        },
+        {
+          "slug": "3xl",
+          "size": "1.875rem",
+          "name": "3XL"
+        }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "text": "var(--wp--preset--color--fg)",
+      "background": "var(--wp--preset--color--bg)"
+    },
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--system-ui)",
+      "lineHeight": "1.6",
+      "fontSize": "var(--wp--preset--font-size--base)"
+    },
+    "elements": {
+      "link": {
+        "color": {
+          "text": "var(--wp--preset--color--fg)"
+        }
+      }
+    },
+    "blocks": {
+      "core/group": {
+        "variations": [
+          {
+            "name": "fullscreen",
+            "title": "Full Screen",
+            "description": "Group that takes full viewport width and height",
+            "category": "layout",
+            "keywords": ["fullscreen", "full", "viewport"],
+            "scope": ["block"],
+            "attributes": {
+              "className": "is-style-fullscreen"
+            }
+          },
+          {
+            "name": "fullscreen-width",
+            "title": "Full Width",
+            "description": "Group that takes full viewport width",
+            "category": "layout",
+            "keywords": ["full-width", "wide", "edge"],
+            "scope": ["block"],
+            "attributes": {
+              "className": "is-style-fullscreen-width"
+            }
+          },
+          {
+            "name": "fullscreen-height",
+            "title": "Full Height",
+            "description": "Group that takes full viewport height",
+            "category": "layout",
+            "keywords": ["full-height", "tall", "hero"],
+            "scope": ["block"],
+            "attributes": {
+              "className": "is-style-fullscreen-height"
+            }
+          },
+          {
+            "name": "full-viewport",
+            "title": "Edge to Edge",
+            "description": "Group that spans entire viewport with no margins",
+            "category": "layout",
+            "keywords": ["edge", "viewport", "no-margin"],
+            "scope": ["block"],
+            "attributes": {
+              "className": "is-style-full-viewport"
+            }
+          }
+        ]
+      },
+      "core/navigation": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--sm)"
+        }
+      },
+      "core/post-title": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--xl)"
+        }
+      },
+      "core/paragraph": {
+        "typography": {
+          "fontSize": "var(--wp--preset--font-size--base)",
+          "lineHeight": "1.7"
+        }
+      }
+    }
+  },
+  "templateParts": [
+    {
+      "name": "header",
+      "title": "Header",
+      "area": "header"
+    },
+    {
+      "name": "footer",
+      "title": "Footer",
+      "area": "footer"
+    }
+  ],
+  "customTemplates": [
+    {
+      "name": "no-sidebar",
+      "title": "No sidebar",
+      "postTypes": [
+        "page",
+        "post"
+      ]
+    }
+  ],
+  "patterns": [
+    "minimalis/hero",
+    "minimalis/call-to-action"
+  ]
+}
