@@ -170,15 +170,18 @@ body.admin-bar #site-header {
 
 /* Navigation Styling */
 .wp-block-navigation,
-.main-navigation {
+.main-navigation,
+.site-header .wp-block-navigation {
   justify-content: flex-end !important;
   margin-left: auto;
   height: 80px;
   display: flex;
   align-items: center;
+  flex: 1;
 }
 
-.wp-block-navigation ul {
+.wp-block-navigation ul,
+.site-header .wp-block-navigation ul {
   gap: 2rem;
   justify-content: flex-end !important;
   margin: 0;
@@ -187,6 +190,17 @@ body.admin-bar #site-header {
   align-items: center;
   height: 100%;
   list-style: none;
+  margin-left: auto;
+}
+
+.site-header .wp-block-navigation .wp-block-navigation__responsive-container {
+  justify-content: flex-end !important;
+  margin-left: auto;
+}
+
+.site-header .wp-block-navigation .wp-block-navigation__container {
+  justify-content: flex-end !important;
+  margin-left: auto;
 }
 
 .wp-block-navigation li {
