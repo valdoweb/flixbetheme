@@ -246,7 +246,7 @@ body.admin-bar #site-header {
   right: 0;
   bottom: 0;
   background: #ffffff;
-  z-index: 999;
+  z-index: 1001;
   padding: 2rem;
   overflow-y: auto;
 }
@@ -292,27 +292,39 @@ body.admin-bar .wp-block-navigation__responsive-container.is-menu-open {
 }
 
 /* Style the close button in navigation overlay */
+.wp-block-navigation__responsive-container-close,
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-close {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  color: var(--wp--preset--color--fg);
-  border-radius: 0.5rem;
-  transition: all 0.3s ease;
+  position: absolute !important;
+  top: 1rem !important;
+  right: 1rem !important;
+  background: rgba(0, 0, 0, 0.1) !important;
+  border: 2px solid var(--wp--preset--color--fg) !important;
+  font-size: 1.5rem !important;
+  width: 44px !important;
+  height: 44px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  color: var(--wp--preset--color--fg) !important;
+  border-radius: 0.5rem !important;
+  transition: all 0.3s ease !important;
+  z-index: 1002 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
+.wp-block-navigation__responsive-container-close:hover,
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-close:hover {
-  background: rgba(0, 0, 0, 0.1);
-  color: var(--wp--preset--color--primary);
+  background: var(--wp--preset--color--primary) !important;
+  color: white !important;
+  transform: scale(1.1) !important;
+}
+
+.wp-block-navigation__responsive-container-close svg {
+  width: 20px !important;
+  height: 20px !important;
+  fill: currentColor !important;
 }
 
 /* Button Enhancements */
