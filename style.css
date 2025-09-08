@@ -30,6 +30,17 @@ body {
   overflow-x: hidden;
 }
 
+/* Adjust for WordPress admin bar when user is logged in */
+body.admin-bar {
+  padding-top: 112px; /* 80px header + 32px admin bar */
+}
+
+@media screen and (max-width: 782px) {
+  body.admin-bar {
+    padding-top: 126px; /* 80px header + 46px mobile admin bar */
+  }
+}
+
 /* Header Enhancements */
 #site-header {
   background: rgba(255, 255, 255, 0.95);
@@ -134,6 +145,19 @@ body {
   visibility: hidden;
   min-height: calc(100vh - 80px);
   overflow-y: auto;
+}
+
+/* Adjust mobile navigation for admin bar */
+body.admin-bar .mobile-navigation {
+  top: 112px; /* 80px header + 32px admin bar */
+  min-height: calc(100vh - 112px);
+}
+
+@media screen and (max-width: 782px) {
+  body.admin-bar .mobile-navigation {
+    top: 126px; /* 80px header + 46px mobile admin bar */
+    min-height: calc(100vh - 126px);
+  }
 }
 
 .mobile-navigation.active {
