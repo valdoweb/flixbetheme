@@ -239,7 +239,7 @@ body.admin-bar #site-header {
 }
 
 /* WordPress Navigation Overlay Customization */
-.wp-block-navigation__responsive-container.is-menu-open {
+.wp-block-navigation__responsive-container {
   position: fixed;
   top: 80px;
   left: 0;
