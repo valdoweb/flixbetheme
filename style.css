@@ -32,12 +32,12 @@ body {
 
 /* Adjust for WordPress admin bar when user is logged in */
 body.admin-bar {
-  padding-top: 112px; /* 80px header + 32px admin bar */
+  padding-top: 80px; /* Keep same header spacing since header is pushed down */
 }
 
 @media screen and (max-width: 782px) {
   body.admin-bar {
-    padding-top: 126px; /* 80px header + 46px mobile admin bar */
+    padding-top: 80px; /* Keep same header spacing since header is pushed down */
   }
 }
 
