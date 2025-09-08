@@ -58,7 +58,6 @@ function flixbe_theme_support() {
         'search-form',
         'gallery',
         'caption',
-        'navigation-widgets',
     ));
     
     // Add support for custom logo
@@ -67,11 +66,6 @@ function flixbe_theme_support() {
         'width'       => 400,
         'flex-height' => true,
         'flex-width'  => true,
-    ));
-    
-    // Register navigation menus
-    register_nav_menus(array(
-        'primary' => __('Primary Menu', 'flixbe'),
     ));
 }
 add_action('after_setup_theme', 'flixbe_theme_support');
