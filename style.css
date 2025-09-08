@@ -604,20 +604,23 @@ main > .wp-block-media-text.alignfull,
 /* Skip link for keyboard navigation */
 .skip-link {
   position: absolute;
-  top: -40px;
-  left: 6px;
+  top: -100px;
+  left: -10000px;
   background: var(--wp--preset--color--fg);
   color: var(--wp--preset--color--bg);
   padding: 8px 16px;
   text-decoration: none;
   font-weight: 600;
-  border-radius: 0 0 4px 4px;
+  border-radius: 4px;
   z-index: 10000;
-  transition: top 0.3s ease;
+  transition: all 0.3s ease;
+  opacity: 0;
 }
 
 .skip-link:focus {
-  top: 0;
+  top: 10px;
+  left: 10px;
+  opacity: 1;
 }
 
 /* Improve color contrast for better readability */
