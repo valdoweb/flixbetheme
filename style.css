@@ -59,6 +59,63 @@ body.admin-bar {
   align-items: center;
 }
 
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.site-branding {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.site-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.site-title a {
+  text-decoration: none;
+  color: var(--wp--preset--color--fg);
+}
+
+.site-tagline {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--wp--preset--color--fg);
+  opacity: 0.7;
+}
+
+.desktop-navigation .nav-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
+
+.desktop-navigation .nav-menu a {
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--wp--preset--color--fg);
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.desktop-navigation .nav-menu a:hover {
+  transform: translateY(-2px);
+  color: var(--wp--preset--color--primary);
+}
+
 /* Push header down when WordPress admin bar is present */
 body.admin-bar #site-header {
   top: 32px; /* Height of admin bar on desktop */
@@ -187,22 +244,23 @@ body.admin-bar .mobile-navigation {
   width: 100%;
 }
 
-.mobile-nav-menu .wp-block-navigation ul {
+.mobile-nav-list {
   flex-direction: column;
   gap: 0;
   width: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
 }
 
-.mobile-nav-menu .wp-block-navigation li {
+.mobile-nav-list li {
   width: 100%;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   margin: 0;
 }
 
-.mobile-nav-menu .wp-block-navigation a {
+.mobile-nav-list a {
   display: block;
   padding: 1.5rem 0;
   font-size: 1.125rem;
@@ -215,7 +273,7 @@ body.admin-bar .mobile-navigation {
   min-height: auto;
 }
 
-.mobile-nav-menu .wp-block-navigation a:hover {
+.mobile-nav-list a:hover {
   background: none;
   color: var(--wp--preset--color--primary);
   transform: translateX(10px);

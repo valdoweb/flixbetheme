@@ -1,20 +1,46 @@
-<!-- wp:group {"tagName":"header","className":"site-header","style":{"spacing":{"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|50","right":"var:preset|spacing|50"}}},"layout":{"type":"flex","justifyContent":"space-between","verticalAlignment":"center"}} -->
-<header class="wp-block-group site-header">
-  <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"},"style":{"spacing":{"blockGap":"var:preset|spacing|30"}}} -->
-  <div class="wp-block-group">
-    <!-- wp:site-logo {"width":44,"shouldSyncIcon":true,"isLink":true} /-->
 
-    <!-- wp:site-title {"level":2,"isLink":true,"style":{"typography":{"fontStyle":"normal","fontWeight":"700"}}} /-->
+<header id="site-header" class="site-header">
+  <div class="header-container">
+    <!-- Logo and Site Title -->
+    <div class="site-branding">
+      <div class="site-logo">
+        <img src="#" alt="Site Logo" width="44" height="44" style="display: none;">
+      </div>
+      <h1 class="site-title">
+        <a href="/">Your Site Name</a>
+      </h1>
+      <p class="site-tagline">Your tagline here</p>
+    </div>
 
-    <!-- wp:site-tagline {"style":{"typography":{"fontSize":"0.9rem"}}} /-->
+    <!-- Desktop Navigation -->
+    <nav class="desktop-navigation" aria-label="Primary Navigation">
+      <ul class="nav-menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" aria-expanded="false" aria-controls="mobile-navigation" aria-label="Open mobile navigation menu">
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+    </button>
   </div>
-  <!-- /wp:group -->
 
-  <!-- wp:navigation {"ariaLabel":"Primary","overlayMenu":"mobile","overlayBackgroundColor":"base","overlayTextColor":"contrast","layout":{"type":"flex","justifyContent":"right"},"style":{"spacing":{"blockGap":"var:preset|spacing|30"}}} -->
-    <!-- wp:navigation-link {"label":"Home","type":"page","url":"/","kind":"custom"} /-->
-    <!-- wp:navigation-link {"label":"About","type":"custom","url":"/about/"} /-->
-    <!-- wp:navigation-link {"label":"Blog","type":"custom","url":"/blog/"} /-->
-    <!-- wp:navigation-link {"label":"Contact","type":"custom","url":"/contact/"} /-->
-  <!-- /wp:navigation -->
+  <!-- Mobile Navigation -->
+  <div class="mobile-navigation" id="mobile-navigation" aria-hidden="true">
+    <div class="mobile-nav-menu">
+      <nav aria-label="Mobile Navigation">
+        <ul class="mobile-nav-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about/">About</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/contact/">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
 </header>
-<!-- /wp:group -->
