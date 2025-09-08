@@ -246,7 +246,7 @@ body.admin-bar #site-header {
   right: 0;
   bottom: 0;
   background: #ffffff;
-  z-index: 1000;
+  z-index: 999;
   padding: 2rem;
   overflow-y: auto;
 }
@@ -289,6 +289,30 @@ body.admin-bar .wp-block-navigation__responsive-container.is-menu-open {
   color: var(--wp--preset--color--primary);
   transform: translateX(10px);
   transition: all 0.3s ease;
+}
+
+/* Style the close button in navigation overlay */
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--wp--preset--color--fg);
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-close:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: var(--wp--preset--color--primary);
 }
 
 /* Button Enhancements */
