@@ -159,8 +159,13 @@ body.admin-bar #site-header {
 }
 
 /* Navigation Styling */
+.wp-block-navigation {
+  justify-content: flex-end;
+}
+
 .wp-block-navigation ul {
   gap: 2rem;
+  justify-content: flex-end;
 }
 
 .wp-block-navigation a {
@@ -174,6 +179,11 @@ body.admin-bar #site-header {
 
 .wp-block-navigation a:hover {
   transform: translateY(-2px);
+}
+
+/* Ensure navigation mobile toggle button is right-aligned */
+.wp-block-navigation__responsive-container-open {
+  margin-left: auto;
 }
 
 /* Mobile Menu Toggle Button */
