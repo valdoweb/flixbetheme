@@ -1,16 +1,21 @@
-<!-- wp:html -->
-<a href="#main-content" class="skip-link">Skip to main content</a>
-<!-- /wp:html -->
-
 <!-- wp:group {"style":{"spacing":{"padding":{"right":"1rem","left":"1rem"}}},"layout":{"type":"flex","justifyContent":"space-between","flexWrap":"wrap"}} -->
 <div id="site-header" class="wp-block-group" role="banner" style="padding-right:1rem;padding-left:1rem">
+
   <!-- wp:site-title {"level":1} /-->
-  
-  <!-- Mobile Menu Button -->
+
+  <!-- wp:html -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <!-- /wp:html -->
+
+  <!-- Desktop navigation -->
+  <!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","justifyContent":"right","orientation":"horizontal"},"className":"desktop-navigation","ariaLabel":"Main navigation"} /-->
+
+  <!-- Custom mobile menu button -->
+  <!-- wp:html -->
   <button 
-    id="mobile-menu-toggle" 
-    class="mobile-menu-toggle" 
-    aria-label="Open mobile navigation menu" 
+    id="mobile-menu-toggle"
+    class="mobile-menu-toggle"
+    aria-label="Open mobile navigation menu"
     aria-expanded="false"
     aria-controls="mobile-navigation"
     type="button">
@@ -19,16 +24,10 @@
     <span class="burger-line" aria-hidden="true"></span>
     <span class="sr-only">Menu</span>
   </button>
-  
-  <!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","justifyContent":"right","orientation":"horizontal"},"className":"desktop-navigation","ariaLabel":"Main navigation"} /-->
-  
-  <!-- Mobile Navigation Overlay -->
-  <nav 
-    id="mobile-navigation" 
-    class="mobile-navigation" 
-    aria-hidden="true"
-    aria-label="Mobile navigation">
-    <!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","flexWrap":"nowrap","orientation":"vertical"},"className":"mobile-nav-menu","ariaLabel":"Mobile navigation menu"} /-->
-  </nav>
+  <!-- /wp:html -->
+
+  <!-- Mobile navigation (as a real Navigation block, not inside raw HTML) -->
+  <!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","flexWrap":"nowrap","orientation":"vertical"},"className":"mobile-nav-menu","ariaLabel":"Mobile navigation","metadata":{"name":"Mobile navigation"}} /-->
+
 </div>
 <!-- /wp:group -->
