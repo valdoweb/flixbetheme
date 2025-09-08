@@ -160,12 +160,26 @@ body.admin-bar #site-header {
 .right-aligned-nav {
   justify-content: flex-end !important;
   margin-left: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .wp-block-navigation ul {
   gap: 2rem;
   justify-content: flex-end !important;
   margin-left: auto;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.wp-block-navigation li {
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 .wp-block-navigation a {
@@ -175,6 +189,9 @@ body.admin-bar #site-header {
   position: relative;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  height: auto;
 }
 
 .wp-block-navigation a:hover {
