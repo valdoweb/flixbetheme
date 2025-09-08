@@ -67,12 +67,20 @@ body.admin-bar {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
+  height: 80px;
 }
 
 .site-branding {
   display: flex;
   align-items: center;
   gap: 1rem;
+  height: 100%;
+}
+
+.site-navigation {
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 .site-title {
@@ -114,6 +122,32 @@ body.admin-bar {
 .desktop-navigation .nav-menu a:hover {
   transform: translateY(-2px);
   color: var(--wp--preset--color--primary);
+}
+
+/* WordPress block adjustments within header */
+.site-header .wp-block-site-logo {
+  margin: 0;
+  line-height: 1;
+}
+
+.site-header .wp-block-site-title {
+  margin: 0;
+  line-height: 1.2;
+}
+
+.site-header .wp-block-navigation {
+  margin: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.site-header .wp-block-group {
+  margin: 0;
+  padding: 0 !important;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 /* Push header down when WordPress admin bar is present */
