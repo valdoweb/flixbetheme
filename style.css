@@ -42,7 +42,7 @@ body.admin-bar {
 }
 
 /* Header Enhancements */
-#site-header {
+header {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -57,17 +57,6 @@ body.admin-bar {
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
-}
-
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  height: 80px;
 }
 
 .site-branding {
