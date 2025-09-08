@@ -159,13 +159,16 @@ body.admin-bar #site-header {
 }
 
 /* Navigation Styling */
-.wp-block-navigation {
-  justify-content: flex-end;
+.wp-block-navigation,
+.right-aligned-nav {
+  justify-content: flex-end !important;
+  margin-left: auto;
 }
 
 .wp-block-navigation ul {
   gap: 2rem;
-  justify-content: flex-end;
+  justify-content: flex-end !important;
+  margin-left: auto;
 }
 
 .wp-block-navigation a {
@@ -182,8 +185,15 @@ body.admin-bar #site-header {
 }
 
 /* Ensure navigation mobile toggle button is right-aligned */
-.wp-block-navigation__responsive-container-open {
-  margin-left: auto;
+.wp-block-navigation__responsive-container-open,
+.wp-block-navigation__responsive-container-close,
+.wp-block-navigation__toggle_button_label {
+  margin-left: auto !important;
+}
+
+/* Force navigation container to be right-aligned */
+.wp-block-navigation .wp-block-navigation__responsive-container {
+  justify-content: flex-end !important;
 }
 
 /* Mobile Menu Toggle Button */
