@@ -59,6 +59,17 @@ body.admin-bar {
   align-items: center;
 }
 
+/* Push header down when WordPress admin bar is present */
+body.admin-bar #site-header {
+  top: 32px; /* Height of admin bar on desktop */
+}
+
+@media screen and (max-width: 782px) {
+  body.admin-bar #site-header {
+    top: 46px; /* Height of admin bar on mobile */
+  }
+}
+
 
 .wp-block-site-title a {
   text-decoration: none;
