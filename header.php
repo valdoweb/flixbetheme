@@ -75,4 +75,4 @@
         </div>
     </header>
 
-    <main id="main" class="site-main">
+    <!-- Header content ends here, main content starts in templates -->
