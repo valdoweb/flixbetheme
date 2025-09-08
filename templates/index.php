@@ -1,6 +1,6 @@
-<!-- wp:template-part {"slug":"header","area":"header"} /-->
 
-<!-- wp:group {"tagName":"main"} -->
+<?php get_header(); ?>
+
 <main id="main-content" class="wp-block-group" role="main">
   <!-- wp:query {"queryId":1,"query":{"perPage":10,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date"},"displayLayout":{"type":"list"},"layout":{"type":"constrained"}} -->
   <div class="wp-block-query">
@@ -24,6 +24,7 @@
   </div>
   <!-- /wp:query -->
 </main>
-<!-- /wp:group -->
 
 <!-- wp:template-part {"slug":"footer","area":"footer"} /-->
+
+<?php get_footer(); ?>

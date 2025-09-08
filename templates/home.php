@@ -1,6 +1,6 @@
+
 <?php get_header(); ?>
 
-<!-- wp:group {"tagName":"main"} -->
 <main id="main-content" class="wp-block-group" role="main">
   <!-- wp:pattern {"slug":"flixbe/hero"} /-->
   <!-- wp:query {"queryId":2,"query":{"perPage":6,"postType":"post","order":"desc","orderBy":"date"}} -->
@@ -17,7 +17,7 @@
   </div>
   <!-- /wp:query -->
 </main>
-<!-- /wp:group -->
+
 <!-- wp:template-part {"slug":"footer","area":"footer"} /-->
 
 <?php get_footer(); ?>
