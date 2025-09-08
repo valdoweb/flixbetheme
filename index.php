@@ -1,4 +1,3 @@
-
 <?php get_header(); ?>
 
 <main id="main-content" class="wp-block-group" role="main">
@@ -24,7 +23,5 @@
   </div>
   <!-- /wp:query -->
 </main>
-
-<!-- wp:template-part {"slug":"footer","area":"footer"} /-->
 
 <?php get_footer(); ?>
