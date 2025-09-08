@@ -6,7 +6,7 @@
 <div id="site-header" class="wp-block-group" role="banner" style="padding-right:1rem;padding-left:1rem">
   <!-- wp:site-title {"level":1} /-->
   
-  <!-- Mobile Menu Button -->
+  <!-- wp:html -->
   <button 
     id="mobile-menu-toggle" 
     class="mobile-menu-toggle" 
@@ -19,16 +19,19 @@
     <span class="burger-line" aria-hidden="true"></span>
     <span class="sr-only">Menu</span>
   </button>
+  <!-- /wp:html -->
   
   <!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","justifyContent":"right","orientation":"horizontal"},"className":"desktop-navigation","ariaLabel":"Main navigation"} /-->
   
-  <!-- Mobile Navigation Overlay -->
+  <!-- wp:html -->
   <nav 
     id="mobile-navigation" 
     class="mobile-navigation" 
     aria-hidden="true"
     aria-label="Mobile navigation">
-    <!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","flexWrap":"nowrap","orientation":"vertical"},"className":"mobile-nav-menu","ariaLabel":"Mobile navigation menu"} /-->
   </nav>
+  <!-- /wp:html -->
+  
+  <!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","flexWrap":"nowrap","orientation":"vertical"},"className":"mobile-nav-menu","ariaLabel":"Mobile navigation menu"} /-->
 </div>
 <!-- /wp:group -->
