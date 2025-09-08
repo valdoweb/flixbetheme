@@ -4,8 +4,27 @@
     <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"1rem","bottom":"1rem"}}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
     <div class="wp-block-group alignwide" style="padding-top:1rem;padding-bottom:1rem">
         <!-- wp:site-title {"level":0,"style":{"typography":{"fontWeight":"700"}}} /-->
-        <!-- wp:navigation {"ref":4,"overlayBackgroundColor":"base","overlayTextColor":"contrast","layout":{"type":"flex","justifyContent":"right","flexWrap":"wrap","orientation":"horizontal"},"className":"main-navigation"} /-->
+        
+        <!-- Desktop Navigation -->
+        <div class="desktop-navigation">
+            <!-- wp:navigation {"ref":4,"overlayBackgroundColor":"base","overlayTextColor":"contrast","layout":{"type":"flex","justifyContent":"right","flexWrap":"wrap","orientation":"horizontal"},"className":"main-navigation"} /-->
+        </div>
+        
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-expanded="false" aria-controls="mobile-navigation" aria-label="Open mobile navigation menu">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="sr-only">Menu</span>
+        </button>
     </div>
     <!-- /wp:group -->
+    
+    <!-- Mobile Navigation Overlay -->
+    <div id="mobile-navigation" class="mobile-navigation" aria-hidden="true">
+        <nav class="mobile-nav-menu">
+            <!-- wp:navigation {"ref":4,"overlayBackgroundColor":"base","overlayTextColor":"contrast","layout":{"type":"flex","flexWrap":"wrap","orientation":"vertical"},"className":"mobile-nav-list"} /-->
+        </nav>
+    </div>
 </div>
 <!-- /wp:group -->
