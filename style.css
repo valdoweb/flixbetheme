@@ -42,7 +42,7 @@ body.admin-bar {
 }
 
 /* Header Enhancements */
-#site-header {
+.site-header {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -55,27 +55,55 @@ body.admin-bar {
   height: 80px;
   z-index: 1000;
   transition: all 0.3s ease;
+}
+
+#site-header {
   display: flex;
   align-items: center;
+  height: 100%;
 }
 
 /* Push header down when WordPress admin bar is present */
-body.admin-bar #site-header {
+body.admin-bar .site-header {
   top: 32px; /* Height of admin bar on desktop */
 }
 
 @media screen and (max-width: 782px) {
-  body.admin-bar #site-header {
+  body.admin-bar .site-header {
     top: 46px; /* Height of admin bar on mobile */
   }
 }
 
 
-.wp-block-site-title a {
+.wp-block-site-title a,
+.site-title a {
   text-decoration: none;
   font-weight: 700;
   font-size: 1.5rem;
   color: var(--wp--preset--color--fg);
+}
+
+/* Traditional navigation menu styles */
+.main-navigation ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
+
+.main-navigation a {
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: var(--wp--preset--color--fg);
+}
+
+.main-navigation a:hover {
+  transform: translateY(-2px);
 }
 
 /* Navigation Styling */
