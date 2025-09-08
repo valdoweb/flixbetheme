@@ -54,7 +54,6 @@ header {
   height: 80px;
   z-index: 1000;
   transition: all 0.3s ease;
-  display: flex;
 }
 
 .site-branding {
