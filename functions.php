@@ -14,17 +14,32 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Enqueue theme styles
+ * Enqueue theme styles and scripts
  */
-function flixbe_enqueue_styles() {
-    wp_enqueue_style(
-        'flixbe-style',
-        get_stylesheet_uri(),
-        array(),
-        wp_get_theme()->get('Version')
+function flixbe_enqueue_assets() {
+    $theme_version = wp_get_theme()->get('Version');
+    // Main stylesheet (already auto-enqueued by block theme, keep if you added dereg)
+    wp_enqueue_style('flixbe-style', get_theme_file_uri('/style.css'), [], $theme_version);
+
+    // Header scroll script
+    wp_enqueue_script(
+        'flixbe-header-scroll',
+        get_theme_file_uri('/assets/js/header-scroll.js'),
+        [],
+        $theme_version,
+        true // in footer
     );
 }
-add_action('wp_enqueue_scripts', 'flixbe_enqueue_styles');
+add_action('wp_enqueue_scripts', 'flixbe_enqueue_assets');
+
+// Optional: add defer attribute (not needed since in footer)
+function flixbe_defer_script( $tag, $handle, $src ) {
+    if ( 'flixbe-header-scroll' === $handle ) {
+        return str_replace( '<script ', '<script defer ', $tag );
+    }
+    return $tag;
+}
+add_filter('script_loader_tag', 'flixbe_defer_script', 10, 3);
 
 /**
  * Add theme support for various WordPress features

@@ -32,9 +32,9 @@ header,
   align-items:center;
   background:rgba(255,255,255,.95);
   backdrop-filter:blur(10px);
-  border-bottom:1px solid rgba(0,0,0,.1);
-  box-shadow:0 2px 20px rgba(0,0,0,.1);
-  transition:.3s ease;
+  border-bottom:1px solid rgba(0,0,0,.08);
+  box-shadow:none;
+  transition:background-color .3s ease, box-shadow .3s ease, border-color .3s ease;
 }
 
 body.admin-bar #site-header { top:32px; }
@@ -477,4 +477,10 @@ button.menu-toggle .icon { width:24px; height:24px; fill:currentColor; }
   padding:1em;
   text-decoration:none;
   color:inherit;
+}
+
+.site-header.is-scrolled {
+  box-shadow:0 2px 20px rgba(0,0,0,.12);
+  border-color:rgba(0,0,0,.12);
+  background:rgba(255,255,255,.95);
 }
