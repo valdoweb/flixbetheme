@@ -250,6 +250,12 @@ body.admin-bar #site-header {
   z-index: 999999 !important;
 }
 
+/* Align menu content to top of overlay */
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container {
+  margin-top: 80px !important;
+  padding-top: 2rem !important;
+}
+
 /* Button Enhancements */
 .wp-block-button__link {
   border-radius: 0.75rem;
