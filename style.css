@@ -249,11 +249,12 @@ body.admin-bar #site-header {
   flex-direction: row;            
 }
 
-/* Align menu content to top of overlay */
-.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container {
-  margin-top: 80px !important;
-  padding-top: 2rem !important;
+.wp-block-navigation__responsive-container-close svg {
+  width: 40px;
+  height: 40px;
 }
+
+
 
 /* Button Enhancements */
 .wp-block-button__link {
