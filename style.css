@@ -252,12 +252,19 @@ body.admin-bar #site-header {
 .wp-block-navigation__responsive-container-close svg {
   width: 40px;
   height: 40px;
+}
+
+.wp-block-navigation__responsive-container-open svg{
+  width: 40px;
+  height: 40px;
 
 }
 
 .wp-block-navigation__responsive-container-close{
   position: fixed;
   z-index: 99999 !important;
+  top: 10px;
+  right: 10px;
 }
 
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content{
