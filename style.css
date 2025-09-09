@@ -240,11 +240,12 @@ body.admin-bar #site-header {
 
 /* Fix mobile navigation overlay positioning */
 .wp-block-navigation__responsive-container.is-menu-open {
-
+  position: fixed !important;
+  width: 100vw !important;
+  height: 100vh !important;
   z-index: 999999 !important;
-  justify-content: flex-start;
-  align-items: flex-start;     
-  text-align: left;
+  justify-content: flex-start; /* or center */
+  align-items: flex-start;     /* or center */
   flex-direction: row;            
 }
 
