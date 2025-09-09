@@ -2,9 +2,23 @@
 <div class="wp-block-group alignfull site-header" id="site-header">
     <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"1rem","bottom":"1rem"}}},"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
     <div class="wp-block-group alignwide" style="padding-top:1rem;padding-bottom:1rem">
-        <!-- wp:site-title {"level":0,"style":{"typography":{"fontWeight":"700"}}} /-->
+        <!-- wp:group {"className":"site-branding","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
+        <div class="wp-block-group site-branding">
+            <!-- wp:site-logo {"width":140,"shouldSyncIcon":true} /-->
+            <!-- wp:site-title {"level":0,"style":{"typography":{"fontWeight":"700"}}} /-->
+        </div>
+        <!-- /wp:group -->
+
         <!-- wp:navigation {"ref":4,"overlayBackgroundColor":"base","overlayTextColor":"contrast","layout":{"type":"flex","justifyContent":"right","flexWrap":"wrap","orientation":"horizontal"},"className":"main-navigation"} /-->
     </div>
     <!-- /wp:group -->
 </div>
 <!-- /wp:group -->
+
+<!-- wp:html -->
+<style>
+.site-branding { gap:.75rem; }
+.site-branding .wp-block-site-logo img { height:auto; display:block; }
+.site-branding .wp-block-site-logo ~ .wp-block-site-title { display:none; } /* Hide title when logo exists */
+</style>
+<!-- /wp:html -->
