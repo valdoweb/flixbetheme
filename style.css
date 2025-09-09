@@ -248,6 +248,9 @@ body.admin-bar #site-header {
   width: 100vw !important;
   height: 100vh !important;
   z-index: 999999 !important;
+  justify-content: flex-start; /* or center */
+  align-items: flex-start;     /* or center */
+  text-align: left;            /* or center */
 }
 
 /* Align menu content to top of overlay */
