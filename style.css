@@ -238,98 +238,85 @@ body.admin-bar #site-header {
   justify-content: flex-end !important;
 }
 
-/* WordPress Navigation Overlay Customization */
+/* WordPress Navigation Overlay - Use standard full-page styles */
 .wp-block-navigation__responsive-container.is-menu-open {
   position: fixed !important;
-  top: 80px !important;
+  top: 0 !important;
   left: 0 !important;
   right: 0 !important;
   bottom: 0 !important;
-  background: #ffffff !important;
-  z-index: 1001 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 100000 !important;
+  background-color: var(--wp--preset--color--bg) !important;
   padding: 2rem !important;
   overflow-y: auto !important;
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
 }
 
-/* Adjust navigation overlay for admin bar */
-body.admin-bar .wp-block-navigation__responsive-container.is-menu-open {
-  top: 112px !important; /* 80px header + 32px admin bar */
-}
-
-@media screen and (max-width: 782px) {
-  body.admin-bar .wp-block-navigation__responsive-container.is-menu-open {
-    top: 126px !important; /* 80px header + 46px mobile admin bar */
-  }
-}
-
-/* Style the navigation overlay menu items */
+/* Standard WordPress navigation overlay container */
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container {
   flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
   gap: 0 !important;
+  margin-top: 4rem !important;
   width: 100% !important;
-  padding-top: 3rem !important;
 }
 
+/* Standard navigation menu items */
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item {
   width: 100% !important;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
   margin: 0 !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
 }
 
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item a {
   display: block !important;
   padding: 1.5rem 0 !important;
-  font-size: 1.125rem !important;
-  font-weight: 600 !important;
+  font-size: 1.25rem !important;
+  font-weight: 400 !important;
   width: 100% !important;
   text-align: left !important;
   color: var(--wp--preset--color--fg) !important;
   text-decoration: none !important;
-  border-radius: 0 !important;
-  transform: none !important;
+  border: none !important;
+  background: none !important;
 }
 
-.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item a:hover {
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item a:hover,
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item a:focus {
   color: var(--wp--preset--color--primary) !important;
-  transform: translateX(10px) !important;
-  transition: all 0.3s ease !important;
-  background: transparent !important;
+  background: none !important;
 }
 
-/* Style the close button in navigation overlay */
+/* Standard close button styling */
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-close {
   position: absolute !important;
-  top: 1rem !important;
-  right: 1rem !important;
-  background: rgba(0, 0, 0, 0.1) !important;
-  border: 2px solid var(--wp--preset--color--fg) !important;
-  font-size: 1.5rem !important;
-  width: 44px !important;
-  height: 44px !important;
+  top: 1.5rem !important;
+  right: 1.5rem !important;
+  width: 40px !important;
+  height: 40px !important;
+  border: none !important;
+  background: none !important;
+  color: var(--wp--preset--color--fg) !important;
+  cursor: pointer !important;
+  padding: 0.5rem !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  cursor: pointer !important;
-  color: var(--wp--preset--color--fg) !important;
-  border-radius: 0.5rem !important;
-  transition: all 0.3s ease !important;
-  z-index: 1002 !important;
-  opacity: 1 !important;
-  visibility: visible !important;
+  border-radius: 4px !important;
 }
 
-.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-close:hover {
-  background: var(--wp--preset--color--primary) !important;
-  color: white !important;
-  transform: scale(1.1) !important;
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-close:hover,
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-close:focus {
+  background: rgba(0, 0, 0, 0.1) !important;
 }
 
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-close svg {
-  width: 20px !important;
-  height: 20px !important;
+  width: 24px !important;
+  height: 24px !important;
   fill: currentColor !important;
 }
 
