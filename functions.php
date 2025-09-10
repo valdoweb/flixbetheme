@@ -248,8 +248,9 @@ function flixbe_register_block_styles() {
         )
     );
 }
-add_action('init', 'flixbe_register_block_styles');
 
+add_action('init', 'flixbe_register_block_styles');
+ 
 add_action('after_setup_theme', function () {
     if (function_exists('register_block_pattern_category')) {
         register_block_pattern_category('flixbe', ['label' => __('Flixbe', 'flixbe')]);
