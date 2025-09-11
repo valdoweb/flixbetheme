@@ -22,7 +22,6 @@ body.admin-bar { padding-top:80px; }
 }
 
 /* Header */
-header,
 .site-header {
   position:fixed;
   top:0; left:0; right:0;
@@ -278,10 +277,6 @@ body.admin-bar #site-header { top:32px; }
 main.wp-block-group { padding:0 1rem; margin-top:0; }
 .wp-block-post-content { margin-top:0; padding-top:0; }
 
-main.wp-block-group > *,
-.wp-block-post-content > * {
-  /* scoped container width rules below */
-}
 
 main > .wp-block-heading:not(.alignwide):not(.alignfull),
 main > .wp-block-paragraph:not(.alignwide):not(.alignfull),
