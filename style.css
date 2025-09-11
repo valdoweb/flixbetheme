@@ -316,7 +316,6 @@ main > .wp-block-media-text:not(.alignwide):not(.alignfull),
 .alignfull,
 .wp-site-blocks .alignfull,
 .is-layout-constrained > .alignfull {
-  width: 100vw !important;
   max-width: 100vw !important;
   margin-left: calc(50% - 50vw) !important;
   margin-right: calc(50% - 50vw) !important;
@@ -327,7 +326,6 @@ main > .wp-block-media-text:not(.alignwide):not(.alignfull),
 .wp-block-group.is-style-fullscreen,
 .is-style-full-viewport,
 .wp-block-group.is-style-full-viewport {
-  width: 100vw !important;
   max-width: 100vw !important;
   margin-left: calc(50% - 50vw) !important;
   margin-right: calc(50% - 50vw) !important;
@@ -341,7 +339,6 @@ main > .wp-block-media-text:not(.alignwide):not(.alignfull),
 /* Width-only styles */
 .is-style-fullscreen-width,
 .wp-block-group.is-style-fullscreen-width {
-  width: 100vw !important;
   max-width: 100vw !important;
   margin-left: calc(50% - 50vw) !important;
   margin-right: calc(50% - 50vw) !important;
