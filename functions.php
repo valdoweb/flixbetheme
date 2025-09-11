@@ -217,3 +217,29 @@ add_action('after_setup_theme', function () {
         register_block_pattern_category('hero', ['label' => __('Hero', 'flixbe')]); // safe if already exists
     }
 });
+
+// Register block styles for Groups
+add_action('init', function () {
+    if (function_exists('register_block_style')) {
+        // Full screen styles for Groups
+        register_block_style('core/group', [
+            'name'  => 'fullscreen',
+            'label' => __('Full screen', 'flixbe'),
+        ]);
+        
+        register_block_style('core/group', [
+            'name'  => 'fullscreen-width',
+            'label' => __('Full width', 'flixbe'),
+        ]);
+        
+        register_block_style('core/group', [
+            'name'  => 'fullscreen-height',
+            'label' => __('Full height', 'flixbe'),
+        ]);
+        
+        register_block_style('core/group', [
+            'name'  => 'full-viewport',
+            'label' => __('Edge to edge', 'flixbe'),
+        ]);
+    }
+});
