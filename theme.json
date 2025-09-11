@@ -8,42 +8,15 @@
       "wideSize": "1400px"
     },
     "spacing": {
-      "units": [
-        "px",
-        "rem",
-        "em",
-        "vh",
-        "vw",
-        "%"
-      ]
+      "units": ["px", "rem", "em", "vh", "vw", "%"]
     },
     "color": {
       "palette": [
-        {
-          "slug": "bg",
-          "name": "Background",
-          "color": "#ffffff"
-        },
-        {
-          "slug": "fg",
-          "name": "Foreground",
-          "color": "#111111"
-        },
-        {
-          "slug": "muted",
-          "name": "Muted",
-          "color": "#6b7280"
-        },
-        {
-          "slug": "primary",
-          "name": "Primary",
-          "color": "#2563eb"
-        },
-        {
-          "slug": "accent",
-          "name": "Accent",
-          "color": "#10b981"
-        }
+        { "slug": "bg", "name": "Background", "color": "#ffffff" },
+        { "slug": "fg", "name": "Foreground", "color": "#111111" },
+        { "slug": "muted", "name": "Muted", "color": "#6b7280" },
+        { "slug": "primary", "name": "Primary", "color": "#2563eb" },
+        { "slug": "accent", "name": "Accent", "color": "#10b981" }
       ],
       "gradients": []
     },
@@ -57,49 +30,21 @@
         }
       ],
       "fontSizes": [
-        {
-          "slug": "xs",
-          "size": "0.75rem",
-          "name": "XS"
-        },
-        {
-          "slug": "sm",
-          "size": "0.875rem",
-          "name": "SM"
-        },
-        {
-          "slug": "base",
-          "size": "1rem",
-          "name": "Base"
-        },
-        {
-          "slug": "lg",
-          "size": "1.125rem",
-          "name": "LG"
-        },
-        {
-          "slug": "xl",
-          "size": "1.25rem",
-          "name": "XL"
-        },
-        {
-          "slug": "2xl",
-          "size": "1.5rem",
-          "name": "2XL"
-        },
-        {
-          "slug": "3xl",
-          "size": "1.875rem",
-          "name": "3XL"
-        }
+        { "slug": "xs", "size": "0.75rem", "name": "XS" },
+        { "slug": "sm", "size": "0.875rem", "name": "SM" },
+        { "slug": "base", "size": "1rem", "name": "Base" },
+        { "slug": "lg", "size": "1.125rem", "name": "LG" },
+        { "slug": "xl", "size": "1.25rem", "name": "XL" },
+        { "slug": "2xl", "size": "1.5rem", "name": "2XL" },
+        { "slug": "3xl", "size": "1.875rem", "name": "3XL" }
       ]
     },
     "blocks": {
-      "core/group": {
-        "layout": {
-          "inherit": false
-        }
-      }
+      "core/group":   { "layout": { "inherit": false } },
+      "core/columns": { "layout": { "inherit": false } },
+      "core/cover":   { "layout": { "inherit": false } },
+      "core/query":   { "layout": { "inherit": false } },
+      "core/post-template": { "layout": { "inherit": false } }
     }
   },
   "styles": {
@@ -114,29 +59,12 @@
     },
     "elements": {
       "link": {
-        "color": {
-          "text": "var(--wp--preset--color--fg)"
-        }
+        "color": { "text": "var(--wp--preset--color--fg)" }
       }
     },
     "blocks": {
-      "core/group": {
-        "variations": [
-          { "name": "fullscreen", "label": "Full Screen" },
-          { "name": "fullscreen-width", "label": "Full Width" },
-          { "name": "fullscreen-height", "label": "Full Height" },
-          { "name": "full-viewport", "label": "Edge to Edge" }
-        ],
-        "settings": {
-        "layout": {
-          "inherit": false
-        }
-      }
-      },
       "core/navigation": {
-        "typography": {
-          "fontSize": "var(--wp--preset--font-size--sm)"
-        }
+        "typography": { "fontSize": "var(--wp--preset--font-size--sm)" }
       },
       "core/paragraph": {
         "typography": {
@@ -147,26 +75,11 @@
     }
   },
   "templateParts": [
-    {
-      "name": "header",
-      "title": "Header",
-      "area": "header"
-    },
-    {
-      "name": "footer",
-      "title": "Footer",
-      "area": "footer"
-    }
+    { "name": "header", "title": "Header", "area": "header" },
+    { "name": "footer", "title": "Footer", "area": "footer" }
   ],
   "customTemplates": [
-    {
-      "name": "no-sidebar",
-      "title": "No sidebar",
-      "postTypes": [
-        "page",
-        "post"
-      ]
-    }
+    { "name": "no-sidebar", "title": "No sidebar", "postTypes": ["page", "post"] }
   ],
   "patterns": [
     "flixbe/hero-simple",
