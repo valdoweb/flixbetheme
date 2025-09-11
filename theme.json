@@ -42,11 +42,37 @@
       ]
     },
     "blocks": {
-      "core/group": { "layout": { "inherit": false } },
-      "core/columns": { "layout": { "inherit": false } },
-      "core/cover": { "layout": { "inherit": false } },
-      "core/query": { "layout": { "inherit": false } },
-      "core/post-template": { "layout": { "inherit": false } }
+      "core/group": { 
+        "layout": { "inherit": false },
+        "alignments": ["left", "center", "right", "wide", "full"]
+      },
+      "core/columns": { 
+        "layout": { "inherit": false },
+        "alignments": ["wide", "full"]
+      },
+      "core/cover": { 
+        "layout": { "inherit": false },
+        "alignments": ["left", "center", "right", "wide", "full"]
+      },
+      "core/query": { 
+        "layout": { "inherit": false },
+        "alignments": ["wide", "full"]
+      },
+      "core/post-template": { 
+        "layout": { "inherit": false }
+      },
+      "core/image": {
+        "alignments": ["left", "center", "right", "wide", "full"]
+      },
+      "core/gallery": {
+        "alignments": ["center", "wide", "full"]
+      },
+      "core/media-text": {
+        "alignments": ["wide", "full"]
+      },
+      "core/separator": {
+        "alignments": ["center", "wide", "full"]
+      }
     }
   },
   "styles": {
