@@ -275,6 +275,10 @@ body.admin-bar .site-header { top:32px; }
 }
 
 /* Content width handling */
+main{
+  margin-block-start: 0;
+}
+
 main.wp-block-group { padding:0 1rem; margin-top:0; }
 .wp-block-post-content { margin-top:0; padding-top:0; }
 
