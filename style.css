@@ -36,9 +36,10 @@ body.admin-bar { padding-top:80px; }
   transition:background-color .3s ease, box-shadow .3s ease, border-color .3s ease;
 }
 
-body.admin-bar #site-header { top:32px; }
+/* Admin bar offset: target header.site-header instead of #site-header */
+body.admin-bar .site-header { top:32px; }
 @media (max-width:782px){
-  body.admin-bar #site-header { top:46px; }
+  body.admin-bar .site-header { top:46px; }
 }
 
 .site-header .wp-block-group {
