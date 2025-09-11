@@ -211,29 +211,6 @@ function flixbe_inline_mobile_menu_script() {
 }
 add_action('wp_footer', 'flixbe_inline_mobile_menu_script');
 
-/**
- * Register custom block styles
- */
-add_action('init', function () {
-    if ( function_exists('register_block_style') ) {
-        register_block_style('core/group', [
-            'name'  => 'fullscreen',
-            'label' => __('Full screen', 'flixbe'),
-        ]);
-        register_block_style('core/group', [
-            'name'  => 'full-viewport',
-            'label' => __('Full viewport', 'flixbe'),
-        ]);
-        register_block_style('core/group', [
-            'name'  => 'fullscreen-width',
-            'label' => __('Full screen width', 'flixbe'),
-        ]);
-        register_block_style('core/group', [
-            'name'  => 'fullscreen-height',
-            'label' => __('Full screen height', 'flixbe'),
-        ]);
-    }
-});
  
 add_action('after_setup_theme', function () {
     if (function_exists('register_block_pattern_category')) {
