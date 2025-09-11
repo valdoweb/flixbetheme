@@ -14,6 +14,8 @@
       "palette": [
         { "slug": "bg", "name": "Background", "color": "#ffffff" },
         { "slug": "fg", "name": "Foreground", "color": "#111111" },
+        { "slug": "base", "name": "Base", "color": "#ffffff" },
+        { "slug": "contrast", "name": "Contrast", "color": "#111111" },
         { "slug": "muted", "name": "Muted", "color": "#6b7280" },
         { "slug": "primary", "name": "Primary", "color": "#2563eb" },
         { "slug": "accent", "name": "Accent", "color": "#10b981" }
@@ -40,10 +42,10 @@
       ]
     },
     "blocks": {
-      "core/group":   { "layout": { "inherit": false } },
+      "core/group": { "layout": { "inherit": false } },
       "core/columns": { "layout": { "inherit": false } },
-      "core/cover":   { "layout": { "inherit": false } },
-      "core/query":   { "layout": { "inherit": false } },
+      "core/cover": { "layout": { "inherit": false } },
+      "core/query": { "layout": { "inherit": false } },
       "core/post-template": { "layout": { "inherit": false } }
     }
   },
