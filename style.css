@@ -18,7 +18,7 @@ body {
 }
 body.admin-bar { padding-top:80px; }
 @media (max-width:782px){
-  body.admin.bar { padding-top:80px; }
+  body.admin-bar { padding-top:80px; }
 }
 
 /* Header */
@@ -78,7 +78,7 @@ body.admin-bar #site-header { top:32px; }
 .wp-block-site-title a {
   text-decoration:none;
   font-weight:700;
-  font-size:1.5rem;
+  /* removed font-size to use WP defaults */
   color:var(--wp--preset--color--fg);
 }
 
