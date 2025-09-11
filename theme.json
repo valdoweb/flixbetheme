@@ -126,7 +126,12 @@
           { "name": "fullscreen-width", "label": "Full Width" },
           { "name": "fullscreen-height", "label": "Full Height" },
           { "name": "full-viewport", "label": "Edge to Edge" }
-        ]
+        ],
+        "settings": {
+        "layout": {
+          "inherit": false
+        }
+      }
       },
       "core/navigation": {
         "typography": {
