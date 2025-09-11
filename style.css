@@ -9,7 +9,10 @@ Text Domain: flixbe
 
 /* Base / Reset */
 * { box-sizing: border-box; }
-html, body { overflow-x: visible; }
+html, body { 
+  overflow-x: hidden; /* Changed back to hidden to prevent scrollbar */
+  max-width: 100%;
+}
 body {
   margin:0;
   padding:0;
@@ -39,7 +42,7 @@ body.admin-bar { padding-top:80px; }
 /* Admin bar offset: target header.site-header instead of #site-header */
 body.admin-bar .site-header { top:32px; }
 @media (max-width:782px){
-  body.admin-bar .site-header { top:46px; }
+  body.admin.bar .site-header { top:46px; }
 }
 
 .site-header .wp-block-group {
@@ -312,21 +315,23 @@ main > .wp-block-media-text:not(.alignwide):not(.alignfull),
   padding:0 1rem;
 }
 
-/* Core alignments: force full width over constrained layout */
+/* Core alignments: prevent horizontal scrollbar */
 .alignfull,
 .wp-site-blocks .alignfull,
 .is-layout-constrained > .alignfull {
-  max-width: 100vw !important;
+  width: 100% !important;
+  max-width: 100% !important;
   margin-left: calc(50% - 50vw) !important;
   margin-right: calc(50% - 50vw) !important;
 }
 
-/* Fullscreen styles: override constrained layout */
+/* Fullscreen styles: prevent horizontal scrollbar */
 .is-style-fullscreen,
 .wp-block-group.is-style-fullscreen,
 .is-style-full-viewport,
 .wp-block-group.is-style-full-viewport {
-  max-width: 100vw !important;
+  width: 100% !important;
+  max-width: none !important;
   margin-left: calc(50% - 50vw) !important;
   margin-right: calc(50% - 50vw) !important;
   min-height: 100vh;
@@ -336,12 +341,30 @@ main > .wp-block-media-text:not(.alignwide):not(.alignfull),
   padding: 0;
 }
 
-/* Width-only styles */
+/* Width-only styles: prevent horizontal scrollbar */
 .is-style-fullscreen-width,
 .wp-block-group.is-style-fullscreen-width {
-  max-width: 100vw !important;
+  width: 100% !important;
+  max-width: none !important;
   margin-left: calc(50% - 50vw) !important;
   margin-right: calc(50% - 50vw) !important;
+}
+
+/* Alternative: use dvw (dynamic viewport width) if supporting modern browsers */
+@supports (width: 100dvw) {
+  .alignfull,
+  .wp-site-blocks .alignfull,
+  .is-layout-constrained > .alignfull,
+  .is-style-fullscreen,
+  .wp-block-group.is-style-fullscreen,
+  .is-style-full-viewport,
+  .wp-block-group.is-style-full-viewport,
+  .is-style-fullscreen-width,
+  .wp-block-group.is-style-fullscreen-width {
+    width: 100dvw !important;
+    margin-left: calc(50% - 50dvw) !important;
+    margin-right: calc(50% - 50dvw) !important;
+  }
 }
 
 /* Height-only styles */
