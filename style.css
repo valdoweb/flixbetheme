@@ -9,7 +9,7 @@ Text Domain: flixbe
 
 /* Base / Reset */
 * { box-sizing: border-box; }
-html, body { overflow-x:hidden; }
+html, body { overflow-x: visible; }
 body {
   margin:0;
   padding:0;
@@ -327,27 +327,29 @@ main > .wp-block-media-text:not(.alignwide):not(.alignfull),
 .is-style-full-viewport,
 .wp-block-group.is-style-full-viewport {
   width:100vw;
-  margin-left:calc(-50vw + 50%);
-  margin-right:calc(-50vw + 50%);
-  padding:0;
-  box-sizing:border-box;
-}
-.is-style-fullscreen,
-.is-style-full-viewport { min-height:70vh; }
-
-.is-style-fullscreen-height,
-.wp-block-group.is-style-fullscreen-height {
-  min-height:70vh;
+  margin-left:calc(50% - 50vw);
+  margin-right:calc(50% - 50vw);
+  min-height:100vh;
   display:flex;
   align-items:center;
   justify-content:center;
+  padding:0;
 }
 
-.is-style-fullscreen .wp-block-group,
-.is-style-full-viewport .wp-block-group {
-  max-width:var(--wp--style--global--content-size,720px);
-  margin:0 auto;
-  padding:0 1rem;
+/* Width-only and height-only helpers (if you use them) */
+.is-style-fullscreen-width,
+.wp-block-group.is-style-fullscreen-width {
+  width:100vw;
+  margin-left:calc(50% - 50vw);
+  margin-right:calc(50% - 50vw);
+}
+
+.is-style-fullscreen-height,
+.wp-block-group.is-style-fullscreen-height {
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
 .wp-block-group.is-style-fullscreen[style*="padding-top:3rem"],
