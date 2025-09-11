@@ -93,6 +93,13 @@
           "name": "3XL"
         }
       ]
+    },
+    "blocks": {
+      "core/group": {
+        "layout": {
+          "inherit": false
+        }
+      }
     }
   },
   "styles": {
@@ -115,60 +122,15 @@
     "blocks": {
       "core/group": {
         "variations": [
-          {
-            "name": "fullscreen",
-            "title": "Full Screen",
-            "description": "Group that takes full viewport width and height",
-            "category": "layout",
-            "keywords": ["fullscreen", "full", "viewport"],
-            "scope": ["block"],
-            "attributes": {
-              "className": "is-style-fullscreen"
-            }
-          },
-          {
-            "name": "fullscreen-width",
-            "title": "Full Width",
-            "description": "Group that takes full viewport width",
-            "category": "layout",
-            "keywords": ["full-width", "wide", "edge"],
-            "scope": ["block"],
-            "attributes": {
-              "className": "is-style-fullscreen-width"
-            }
-          },
-          {
-            "name": "fullscreen-height",
-            "title": "Full Height",
-            "description": "Group that takes full viewport height",
-            "category": "layout",
-            "keywords": ["full-height", "tall", "hero"],
-            "scope": ["block"],
-            "attributes": {
-              "className": "is-style-fullscreen-height"
-            }
-          },
-          {
-            "name": "full-viewport",
-            "title": "Edge to Edge",
-            "description": "Group that spans entire viewport with no margins",
-            "category": "layout",
-            "keywords": ["edge", "viewport", "no-margin"],
-            "scope": ["block"],
-            "attributes": {
-              "className": "is-style-full-viewport"
-            }
-          }
+          { "name": "fullscreen", "label": "Full Screen" },
+          { "name": "fullscreen-width", "label": "Full Width" },
+          { "name": "fullscreen-height", "label": "Full Height" },
+          { "name": "full-viewport", "label": "Edge to Edge" }
         ]
       },
       "core/navigation": {
         "typography": {
           "fontSize": "var(--wp--preset--font-size--sm)"
-        }
-      },
-      "core/post-title": {
-        "typography": {
-          "fontSize": "var(--wp--preset--font-size--xl)"
         }
       },
       "core/paragraph": {
@@ -202,7 +164,7 @@
     }
   ],
   "patterns": [
-    "flixbe/hero",
+    "flixbe/hero-simple",
     "flixbe/call-to-action"
   ]
 }
