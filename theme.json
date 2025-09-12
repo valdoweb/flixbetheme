@@ -50,17 +50,15 @@
   },
   "styles": {
     "color": {
-      "text": "var(--wp--preset--color--fg)",
       "background": "var(--wp--preset--color--bg)"
     },
     "typography": {
-      "fontFamily": "var(--wp--preset--font-family--system-ui)",
-      "lineHeight": "1.6",
       "fontSize": "var(--wp--preset--font-size--base)"
     },
     "elements": {
       "link": {
-        "color": { "text": "var(--wp--preset--color--fg)" }
+        "color": { "text": "var(--wp--preset--color--fg)" },
+        "typography": { "fontWeight": "500" }
       }
     },
     "blocks": {
