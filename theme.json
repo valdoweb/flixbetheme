@@ -47,9 +47,7 @@
     }
   },
   "styles": {
-    "color": {
-      "text": "var(--wp--preset--color--fg)"
-    },
+    "color": { "text": "var(--wp--preset--color--fg)" },
     "elements": {
       "link": {
         "typography": { "fontWeight": "600" }

@@ -12,6 +12,8 @@ Text Domain: flixbe
 html, body {
   overflow-x: hidden; /* prevent horizontal scrollbar */
   max-width: 100%;
+  /* Ripristina il font di default (editor/OS) */
+  font-family: inherit;
 }
 body {
   margin:0;
@@ -116,9 +118,9 @@ body.admin-bar .site-header { top:32px; }
   height:100%;
 }
 .site-header .wp-block-navigation a {
-  text-decoration:none;
-  font-weight:600; /* was 500 */
-  color:var(--wp--preset--color--fg);
+  font-weight: 600;
+  color: var(--wp--preset--color--fg);
+  text-decoration: none;
   transition:.3s ease;
   position:relative;
   padding:.5rem 1rem;
@@ -482,4 +484,5 @@ button:disabled,a[aria-disabled="true"] { opacity:.6; cursor:not-allowed; }
 }
 .site-header button.menu-toggle .icon { width:24px; height:24px; fill:currentColor; }
 /* Global: tutti i link 500 (fallback se il theme.json non è caricato) */
+/* Fallback: tutti i link semi-bold (se il theme.json non è caricato) */
 a { font-weight: 600; } /* global fallback */
