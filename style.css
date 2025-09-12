@@ -481,3 +481,5 @@ button:disabled,a[aria-disabled="true"] { opacity:.6; cursor:not-allowed; }
   font-size:0;
 }
 .site-header button.menu-toggle .icon { width:24px; height:24px; fill:currentColor; }
+/* Global: tutti i link 500 (fallback se il theme.json non è caricato) */
+a { font-weight: 500; }
