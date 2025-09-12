@@ -129,8 +129,8 @@ body.admin-bar .site-header { top:32px; }
   min-width:44px;
 }
 .site-header .wp-block-navigation a:hover {
-  transform:translateY(-2px);
-  color:var(--wp--preset--color--primary);
+  transform: translateY(-2px);
+  color: inherit; /* was var(--wp--preset--color--primary) */
 }
 
 /* Mobile / Overlay (scoped only to header) */
