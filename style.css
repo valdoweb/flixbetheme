@@ -472,3 +472,71 @@ button:disabled,a[aria-disabled="true"] { opacity:.6; cursor:not-allowed; }
 /* Global: tutti i link 500 (fallback se il theme.json non è caricato) */
 /* Fallback: tutti i link semi-bold (se il theme.json non è caricato) */
 a { font-weight: 600; } /* fallback globale */
+
+/* Home: griglia articoli 3 / 2 / 1 colonne */
+.home .wp-block-post-template {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 2rem);
+}
+
+@media (max-width: 1024px) {
+  .home .wp-block-post-template { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .home .wp-block-post-template { grid-template-columns: 1fr; }
+}
+
+/* Card articolo */
+.home .wp-block-group.single {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 6px 24px rgba(0,0,0,.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+  padding: 1rem;
+  height: 100%;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.home .wp-block-group.single:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0,0,0,.12);
+}
+
+/* Immagine in evidenza nella card */
+.home .wp-block-group.single .wp-block-post-featured-image { 
+  margin: 0; 
+  border-radius: .75rem; 
+  overflow: hidden; 
+}
+.home .wp-block-group.single .wp-block-post-featured-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+/* Testi card */
+.home .wp-block-group.single .wp-block-post-title { margin: .25rem 0 0; }
+.home .wp-block-group.single .wp-block-post-title a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--wp--preset--color--fg);
+}
+.home .wp-block-group.single .wp-block-post-date,
+.home .wp-block-group.single .wp-block-post-terms {
+  color: var(--wp--preset--color--muted);
+  font-size: .9rem;
+}
+
+/* Read more */
+.home .wp-block-group.single .wp-block-read-more .wp-element-button {
+  border-radius: .75rem;
+  font-weight: 600;
+  padding: .625rem 1rem;
+  margin-top: .25rem;
+  align-self: flex-start;
+}
