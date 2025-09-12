@@ -42,7 +42,7 @@ body.admin-bar { padding-top:80px; }
 /* Admin bar offset: target header.site-header instead of #site-header */
 body.admin-bar .site-header { top:32px; }
 @media (max-width:782px){
-  body.admin.bar .site-header { top:46px; }
+  body.admin-bar .site-header { top:46px; } /* fix typo */
 }
 
 .site-header .wp-block-group {
@@ -516,3 +516,136 @@ button.menu-toggle .icon { width:24px; height:24px; fill:currentColor; }
   border-color:rgba(0,0,0,.12);
   background:rgba(255,255,255,.95);
 }
+
+/* Admin bar offset */
+body.admin-bar .site-header { top:32px; }
+@media (max-width:782px){
+  body.admin-bar .site-header { top:46px; } /* fix typo */
+}
+
+/* Navigation (solo header) */
+.site-header .wp-block-navigation {
+  margin:0;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  flex:1;
+}
+
+.site-header .wp-block-navigation ul,
+.site-header .wp-block-navigation .wp-block-navigation__container {
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:2rem;
+  justify-content:flex-end;
+}
+
+.site-header .wp-block-navigation li {
+  display:flex;
+  align-items:center;
+  margin:0;
+  height:100%;
+}
+
+.site-header .wp-block-navigation a {
+  text-decoration:none;
+  font-weight:600;
+  color:var(--wp--preset--color--fg);
+  transition:.3s ease;
+  position:relative;
+  padding:.5rem 1rem;
+  border-radius:.5rem;
+  display:flex;
+  align-items:center;
+  min-height:44px;
+  min-width:44px;
+}
+.site-header .wp-block-navigation a:hover {
+  transform:translateY(-2px);
+  color:var(--wp--preset--color--primary);
+}
+
+/* Mobile / Overlay (solo header) */
+.site-header .wp-block-navigation__responsive-container-open,
+.site-header .wp-block-navigation__responsive-container-close,
+.site-header .wp-block-navigation__toggle_button_label {
+  margin-left:auto !important;
+}
+
+.site-header .wp-block-navigation .wp-block-navigation__responsive-container {
+  justify-content:flex-end;
+}
+
+.site-header .wp-block-navigation__responsive-container.is-menu-open {
+  position:fixed !important;
+  inset:0;
+  width:100vw !important;
+  height:100vh !important;
+  z-index:99998 !important;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:flex-start;
+  padding:var(--overlay-top-pad,2rem) var(--overlay-side-pad,2rem);
+  background:var(--overlay-bg,rgba(255,255,255,.96));
+  color:var(--overlay-fg,#111);
+  text-align:left;
+}
+
+.site-header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container {
+  flex-direction:column;
+  align-items:flex-start;
+  gap:1rem;
+  width:100%;
+}
+
+.site-header .wp-block-navigation__responsive-container-close {
+  position:fixed;
+  top:10px; right:10px;
+  z-index:99999 !important;
+}
+.site-header .wp-block-navigation__responsive-container-close svg,
+.site-header .wp-block-navigation__responsive-container-open svg {
+  width:40px; height:40px;
+}
+
+.site-header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content {
+  padding:0;
+  width:100%;
+}
+
+/* Focus (solo header nav) */
+.site-header .wp-block-navigation a:focus-visible {
+  outline:3px solid var(--wp--preset--color--primary);
+  outline-offset:2px;
+  box-shadow:0 0 0 1px #fff,0 0 0 4px var(--wp--preset--color--primary);
+}
+
+/* Legacy menu (limita al solo header) */
+.site-header .primary-navigation { display:none; margin:0; }
+.site-header .primary-navigation.toggled { display:block; }
+.site-header .primary-navigation ul { list-style:none; margin:0; padding:0; }
+.site-header .primary-navigation li { border-bottom:1px solid #e5e5e5; }
+.site-header .primary-navigation a {
+  display:block;
+  padding:1em;
+  text-decoration:none;
+  color:inherit;
+}
+.site-header button.menu-toggle {
+  background:none;
+  border:0;
+  cursor:pointer;
+  padding:.5em;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:0;
+}
+.site-header button.menu-toggle .icon { width:24px; height:24px; fill:currentColor; }

@@ -83,6 +83,6 @@
     { "name": "no-sidebar", "title": "No sidebar", "postTypes": ["page", "post"] }
   ],
   "patterns": [
-    "flixbe/hero-simple"
+    "flixbe/hero-main"
   ]
 }
