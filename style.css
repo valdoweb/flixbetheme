@@ -313,6 +313,23 @@ main.alignwide > .wp-block-post-featured-image:not(.alignwide):not(.alignfull) {
   padding-right: 1rem;
 }
 
+/* Single: perfectly align title, featured image, and content */
+main.alignwide > .wp-block-post-title,
+main.alignwide > .wp-block-post-featured-image,
+main.alignwide > .wp-block-post-content {
+  max-width: var(--wp--style--global--content-size, 1000px);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Normalize vertical spacing and remove stray figure margins */
+main.alignwide > .wp-block-post-title { margin-block: 1.5rem 1rem; }
+main.alignwide > .wp-block-post-featured-image { margin-block: 1.5rem; }
+main.alignwide > .wp-block-post-featured-image figure { margin: 0; }
+main.alignwide > .wp-block-post-featured-image img { display: block; width: 100%; height: auto; }
+
 /* Core alignments: prevent horizontal scrollbar */
 .alignfull,
 .wp-site-blocks .alignfull,
