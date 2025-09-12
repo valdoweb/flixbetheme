@@ -10,10 +10,9 @@ Text Domain: flixbe
 /* Base / Reset */
 * { box-sizing: border-box; }
 html, body {
-  overflow-x: hidden; /* prevent horizontal scrollbar */
+  overflow-x: hidden;
   max-width: 100%;
-  /* Ripristina il font di default (editor/OS) */
-  font-family: inherit;
+  font-family: var(--wp--preset--font-family--system-ui); /* usa font di sistema */
 }
 body {
   margin:0;
@@ -485,4 +484,4 @@ button:disabled,a[aria-disabled="true"] { opacity:.6; cursor:not-allowed; }
 .site-header button.menu-toggle .icon { width:24px; height:24px; fill:currentColor; }
 /* Global: tutti i link 500 (fallback se il theme.json non è caricato) */
 /* Fallback: tutti i link semi-bold (se il theme.json non è caricato) */
-a { font-weight: 600; } /* global fallback */
+a { font-weight: 600; } /* fallback globale */
