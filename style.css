@@ -89,46 +89,6 @@ body.admin-bar .site-header { top:32px; }
   color:var(--wp--preset--color--fg);
 }
 
-/* Navigation (scoped only to header) */
-.site-header .wp-block-navigation {
-  margin:0;
-  height:100%;
-  display:flex;
-  align-items:center;
-  justify-content:flex-end;
-  flex:1;
-}
-.site-header .wp-block-navigation .wp-block-navigation__container,
-.site-header .wp-block-navigation ul {
-  list-style:none;
-  margin:0;
-  padding:0;
-  display:flex;
-  flex-direction:row;
-  flex-wrap:wrap;
-  align-items:center;
-  gap:2rem;
-  justify-content:flex-end;
-}
-.site-header .wp-block-navigation li {
-  display:flex;
-  align-items:center;
-  margin:0;
-  height:100%;
-}
-.site-header .wp-block-navigation a {
-  font-weight: 600;
-  color: var(--wp--preset--color--fg);
-  text-decoration: none;
-  transition:.3s ease;
-  position:relative;
-  padding:.5rem 1rem;
-  border-radius:.5rem;
-  display:flex;
-  align-items:center;
-  min-height:44px;
-  min-width:44px;
-}
 .site-header .wp-block-navigation a:hover {
   transform: translateY(-2px);
   color: inherit; /* was var(--wp--preset--color--primary) */
