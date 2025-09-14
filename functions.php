@@ -230,13 +230,8 @@ add_action('init', function () {
         register_block_style('core/group', [
             'name'  => 'fullscreen-width',
             'label' => __('Full width', 'flixbe'),
-        ]);
-        
-        register_block_style('core/group', [
-            'name'  => 'fullscreen-height',
-            'label' => __('Full height', 'flixbe'),
-        ]);
-        
+        ]);        
+    
         register_block_style('core/group', [
             'name'  => 'full-viewport',
             'label' => __('Edge to edge', 'flixbe'),
