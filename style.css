@@ -283,8 +283,6 @@ main.alignwide > .wp-block-post-featured-image img { display: block; width: 100%
 .wp-block-flixbe-hero.is-style-full-viewport {
   width: 100% !important;
   max-width: none !important;
-  margin-left: calc(50% - 50vw) !important;
-  margin-right: calc(50% - 50vw) !important;
   min-height: 100vh;
 }
 
@@ -294,8 +292,6 @@ main.alignwide > .wp-block-post-featured-image img { display: block; width: 100%
 .wp-block-flixbe-hero.is-style-fullscreen-width {
   width: 100% !important;
   max-width: none !important;
-  margin-left: calc(50% - 50vw) !important;
-  margin-right: calc(50% - 50vw) !important;
 }
 
 /* Height-only */
