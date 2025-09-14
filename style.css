@@ -498,8 +498,7 @@ a { font-weight: 600; } /* fallback globale */
 
 /* Read more */
 .blog .wp-block-group.single .wp-block-read-more .wp-element-button {
-  border-radius: .75rem;
-  font-weight: 600;
+  border-radius: .5rem;
   padding: .625rem 1rem;
   margin-top: .25rem;
   align-self: flex-start;
