@@ -161,30 +161,6 @@ body.admin-bar .site-header { top:32px; }
   background:linear-gradient(135deg,var(--wp--preset--color--accent),#059669) !important;
 }
 
-/* Post / Query cards */
-.wp-block-post-title a {
-  text-decoration:none;
-  color:var(--wp--preset--color--fg);
-  font-weight:600; /* was 500 */
-  transition:color .3s ease;
-}
-.wp-block-post-title a:hover { opacity:.7; }
-.wp-block-post-template > * {
-  background:#fff;
-  padding:2rem;
-  border-radius:1rem;
-  box-shadow:0 4px 20px rgba(0,0,0,.08);
-  margin-bottom:2rem;
-  transition:.3s cubic-bezier(.4,0,.2,1);
-}
-.wp-block-post-template > *:hover {
-  transform:translateY(-4px);
-  box-shadow:0 8px 30px rgba(0,0,0,.12);
-}
-@media (max-width:768px){
-  .wp-block-post-template > * { padding:1.5rem; }
-}
-
 /* Footer */
 .site-footer {
   margin-top:2rem;
