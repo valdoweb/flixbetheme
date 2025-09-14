@@ -511,5 +511,5 @@ a { font-weight: 600; } /* fallback globale */
 
 .blog .wp-element-button, .wp-block-button__link {
   margin-block-start: 0;
-  padding: .625rem 1rem;
+  padding: .3rem;
 }
