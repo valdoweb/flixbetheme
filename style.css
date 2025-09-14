@@ -464,10 +464,7 @@ a { font-weight: 600; } /* fallback globale */
 }
 
 /* Card articolo */
-.blog .wp-block-group.single {
-  background: #fff;
-  border-radius: 1rem;
-  box-shadow: 0 6px 24px rgba(0,0,0,.08);
+.blog .wp-block-group.single {  
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -476,6 +473,7 @@ a { font-weight: 600; } /* fallback globale */
   height: 100%;
   transition: transform .25s ease, box-shadow .25s ease;
 }
+
 .blog .wp-block-group.single:hover {
   transform: translateY(-4px);
   box-shadow: 0 10px 30px rgba(0,0,0,.12);
