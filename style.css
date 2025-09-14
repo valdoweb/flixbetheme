@@ -277,23 +277,31 @@ main.alignwide > .wp-block-post-featured-image img { display: block; width: 100%
 /* Fullscreen styles: prevent horizontal scrollbar */
 .is-style-fullscreen,
 .wp-block-group.is-style-fullscreen,
+.wp-block-flixbe-hero.is-style-fullscreen,
 .is-style-full-viewport,
-.wp-block-group.is-style-full-viewport {
+.wp-block-group.is-style-full-viewport,
+.wp-block-flixbe-hero.is-style-full-viewport {
   width: 100% !important;
   max-width: none !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
   min-height: 100vh;
 }
 
-/* Width-only styles: prevent horizontal scrollbar */
+/* Width-only */
 .is-style-fullscreen-width,
-.wp-block-group.is-style-fullscreen-width {
+.wp-block-group.is-style-fullscreen-width,
+.wp-block-flixbe-hero.is-style-fullscreen-width {
   width: 100% !important;
   max-width: none !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
 }
 
-/* Height-only styles */
+/* Height-only */
 .is-style-fullscreen-height,
-.wp-block-group.is-style-fullscreen-height {
+.wp-block-group.is-style-fullscreen-height,
+.wp-block-flixbe-hero.is-style-fullscreen-height {
   min-height: 100vh;
   display: flex;
   align-items: center;

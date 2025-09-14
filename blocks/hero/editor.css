@@ -3,3 +3,8 @@
 }
 .wp-block-flixbe-hero .hero__inner { text-align: center; }
 .wp-block-flixbe-hero .hero__inner :where(h1, p){ max-width: 60ch; margin-inline: auto; }
+/* Preview editor per stili full */
+.wp-block-flixbe-hero.is-style-fullscreen,
+.wp-block-flixbe-hero.is-style-full-viewport {
+  min-height: 100vh;
+}
