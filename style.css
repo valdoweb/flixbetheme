@@ -516,3 +516,6 @@ a { font-weight: 600; } /* fallback globale */
   align-self: flex-start;
 }
 
+.blog .wp-block-post-excerpt{
+  margin-top:0;
+}
