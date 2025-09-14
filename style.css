@@ -492,7 +492,7 @@ a { font-weight: 600; } /* fallback globale */
 .blog .wp-block-group.single .wp-block-post-date,
 .blog .wp-block-group.single .wp-block-post-terms {
   color: var(--wp--preset--color--muted);
-  font-size: .9rem;
+  font-size: .8rem;
   margin-block-start: 0;
 }
 
@@ -511,4 +511,5 @@ a { font-weight: 600; } /* fallback globale */
 
 .blog .wp-element-button, .wp-block-button__link {
   margin-block-start: 0;
+  padding: .625rem 1rem;
 }
