@@ -474,11 +474,6 @@ a { font-weight: 600; } /* fallback globale */
   transition: transform .25s ease, box-shadow .25s ease;
 }
 
-.blog .wp-block-group.single:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 30px rgba(0,0,0,.12);
-}
-
 /* Immagine in evidenza nella card */
 .blog .wp-block-group.single .wp-block-post-featured-image { 
   margin: 0; 
