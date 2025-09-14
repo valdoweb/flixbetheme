@@ -48,7 +48,7 @@
     }
   },
   "templateParts": [
-    { "name": "header", "title": "Header", "area": "header" },
+    { "name": "footer-top", "title": "Footer Top", "area": "footer" },
     { "name": "footer", "title": "Footer", "area": "footer" }
   ],
   "customTemplates": [
