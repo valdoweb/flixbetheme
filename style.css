@@ -504,6 +504,7 @@ a { font-weight: 600; } /* fallback globale */
 .blog .wp-block-group.single .wp-block-post-terms {
   color: var(--wp--preset--color--muted);
   font-size: .9rem;
+  margin-block-start: 0;
 }
 
 /* Read more */
@@ -514,3 +515,4 @@ a { font-weight: 600; } /* fallback globale */
   margin-top: .25rem;
   align-self: flex-start;
 }
+
