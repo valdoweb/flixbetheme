@@ -243,3 +243,34 @@ add_action('init', function () {
         ]);
     }
 });
+
+// Aggiunge la categoria "flixbe" ai blocchi
+add_filter('block_categories_all', function ($categories) {
+    $categories[] = [
+        'slug'  => 'flixbe',
+        'title' => __('Flixbe', 'flixbe'),
+        'icon'  => null,
+    ];
+    return $categories;
+}, 10, 2);
+
+// Registra script/stili del blocco Hero e il blocco (block.json)
+add_action('init', function () {
+    $ver = wp_get_theme()->get('Version');
+
+    // Script editor (senza build, usa globals wp.*)
+    wp_register_script(
+        'flixbe-hero-editor',
+        get_theme_file_uri('/blocks/hero/index.js'),
+        ['wp-blocks','wp-element','wp-i18n','wp-components','wp-block-editor'],
+        $ver,
+        true
+    );
+
+    // Stili front + editor
+    wp_register_style('flixbe-hero-style', get_theme_file_uri('/blocks/hero/style.css'), [], $ver);
+    wp_register_style('flixbe-hero-editor-style', get_theme_file_uri('/blocks/hero/editor.css'), ['wp-edit-blocks'], $ver);
+
+    // Registra il blocco tramite block.json
+    register_block_type(__DIR__ . '/blocks/hero');
+});

@@ -1,0 +1,25 @@
+{
+  "apiVersion": 2,
+  "name": "flixbe/hero",
+  "title": "Hero",
+  "category": "flixbe",
+  "description": "Hero a tutta larghezza con titolo, testo e pulsanti.",
+  "icon": "slides",
+  "textdomain": "flixbe",
+  "supports": {
+    "align": ["full", "wide"],
+    "spacing": { "padding": true, "margin": ["top", "bottom"] },
+    "color": { "text": true, "background": true },
+    "anchor": true
+  },
+  "attributes": {
+    "title":   { "type": "string", "source": "html", "selector": "h1" },
+    "text":    { "type": "string", "source": "html", "selector": "p" },
+    "mediaURL":{ "type": "string", "default": "" },
+    "mediaID": { "type": "number" },
+    "dimRatio":{ "type": "number", "default": 30 }
+  },
+  "editorScript": "flixbe-hero-editor",
+  "style": "flixbe-hero-style",
+  "editorStyle": "flixbe-hero-editor-style"
+}

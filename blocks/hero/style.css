@@ -1,0 +1,19 @@
+.wp-block-flixbe-hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-block: clamp(3rem, 8vw, 8rem);
+  color: inherit;
+}
+.wp-block-flixbe-hero .hero__inner {
+  max-width: var(--wp--style--global--content-size, 1000px);
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.wp-block-flixbe-hero h1 { margin: 0; }
+.wp-block-flixbe-hero p { margin: .5rem 0 0; }
