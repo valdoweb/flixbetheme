@@ -476,9 +476,10 @@ a { font-weight: 600; } /* fallback globale */
 /* Immagine in evidenza nella card */
 .blog .wp-block-group.single .wp-block-post-featured-image { 
   margin: 0; 
-  border-radius: .75rem; 
+  border-radius: .5rem; 
   overflow: hidden; 
 }
+
 .blog .wp-block-group.single .wp-block-post-featured-image img {
   display: block;
   width: 100%;
