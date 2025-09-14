@@ -22,8 +22,7 @@
   "styles": [
     { "name": "fullscreen", "label": "Full screen" },
     { "name": "full-viewport", "label": "Full viewport" },
-    { "name": "fullscreen-width", "label": "Full screen width" },
-    { "name": "fullscreen-height", "label": "Full screen height" }
+    { "name": "fullscreen-width", "label": "Full screen width" }
   ],
   "editorScript": "flixbe-hero-editor",
   "style": "flixbe-hero-style",
