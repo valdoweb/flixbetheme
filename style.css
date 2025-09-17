@@ -163,7 +163,8 @@ body.admin-bar .site-header { top:32px; }
 
 /* Footer */
 .site-footer {
-  margin-top:2rem;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
   border-top:1px solid rgba(0,0,0,.1);
   transition:.3s ease;
 }
@@ -515,4 +516,20 @@ a { font-weight: 600; } /* fallback globale */
 .blog .wp-element-button, .wp-block-button__link {
   margin-block-start: 0;
   padding: .3rem;
+}
+
+/* Footer: no external margins */
+.footer-top,
+.site-footer,
+.footer-top.wp-block-group,
+.site-footer.wp-block-group {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+/* If you previously had margin-top on .site-footer, replace it with 0 */
+// .site-footer { margin-top:2rem; }  /* remove this if present */
+.site-footer {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
