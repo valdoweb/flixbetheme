@@ -518,17 +518,15 @@ a { font-weight: 600; } /* fallback globale */
   padding: .3rem;
 }
 
-/* Footer: no external margins */
+/* Footer wrappers: no external margins */
 .footer-top,
-.site-footer,
-.footer-top.wp-block-group,
-.site-footer.wp-block-group {
+.site-footer {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
 
 /* If you previously had margin-top on .site-footer, replace it with 0 */
-// .site-footer { margin-top:2rem; }  /* remove this if present */
+/* .site-footer { margin-top:2rem; }  /* remove this if present */
 .site-footer {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
