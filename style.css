@@ -558,3 +558,40 @@ a { font-weight: 600; } /* fallback globale */
 */
 
 /* RIMOSSI: vecchi riferimenti a gap: var(--wp--custom--flex--gap,2rem); */
+
+/* Variabili header (fallback) */
+:root {
+  --flixbe-header-height: var(--wp--custom--header--height,80px);
+  --flixbe-header-height-mobile: var(--wp--custom--header--height-mobile,64px);
+  --flixbe-header-height-scrolled: var(--wp--custom--header--scrolled-height,70px);
+}
+
+.site-header {
+  height: var(--flixbe-header-height);
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width:782px){
+  .site-header {
+    height: var(--flixbe-header-height-mobile);
+  }
+}
+
+.site-header.is-scrolled {
+  height: var(--flixbe-header-height-scrolled);
+}
+
+body {
+  padding-top: var(--flixbe-header-height);
+}
+@media (max-width:782px){
+  body {
+    padding-top: var(--flixbe-header-height-mobile);
+  }
+}
+
+body.admin-bar .site-header { top:32px; }
+@media (max-width:782px){
+  body.admin-bar .site-header { top:46px; }
+}
