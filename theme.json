@@ -28,9 +28,12 @@
   },
   "custom": {
     "flex": {
-      "gap": "2rem",
-      "gap-small": "1rem",
-      "gap-large": "3rem"
+      "gap-x": "2rem",
+      "gap-y": "1.25rem",
+      "gap-x-small": "1rem",
+      "gap-y-small": "0.75rem",
+      "gap-x-large": "3rem",
+      "gap-y-large": "2rem"
     }
   },
   "styles": {

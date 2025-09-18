@@ -532,16 +532,29 @@ a { font-weight: 600; } /* fallback globale */
   margin-bottom: 0 !important;
 }
 
-/* Usa variabile custom per i gap flex */
+/* Header navigation: usa gap separati */
 .site-header .wp-block-navigation .wp-block-navigation__container {
-  gap: var(--wp--custom--flex--gap,2rem);
+  column-gap: var(--wp--custom--flex--gap-x, 2rem);
+  row-gap: var(--wp--custom--flex--gap-y, 1.25rem);
 }
 
+/* Griglia articoli (blog) */
 .blog .wp-block-post-template {
-  gap: var(--wp--custom--flex--gap,2rem);
+  column-gap: var(--wp--custom--flex--gap-x, 2rem);
+  row-gap: var(--wp--custom--flex--gap-y, 1.25rem);
 }
 
-/* Variante (se serve più compatto) */
+/* Variante compatta */
 .blog.compact .wp-block-post-template {
-  gap: var(--wp--custom--flex--gap-small,1rem);
+  column-gap: var(--wp--custom--flex--gap-x-small, 1rem);
+  row-gap: var(--wp--custom--flex--gap-y-small, 0.75rem);
 }
+
+/* Variante larga (se serve in futuro)
+.blog.wide-gaps .wp-block-post-template {
+  column-gap: var(--wp--custom--flex--gap-x-large, 3rem);
+  row-gap: var(--wp--custom--flex--gap-y-large, 2rem);
+}
+*/
+
+/* RIMOSSI: vecchi riferimenti a gap: var(--wp--custom--flex--gap,2rem); */
