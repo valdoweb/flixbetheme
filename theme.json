@@ -6,6 +6,24 @@
     "layout": {
       "contentSize": "1000px",
       "wideSize": "1400px"
+    },
+    "typography": {
+      "fontFamilies": [
+        {
+          "slug": "system-ui",
+          "name": "System UI",
+          "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif"
+        }
+      ]
+    },
+    "color": {
+      "palette": [
+        { "slug": "bg", "name": "Background", "color": "#ffffff" },
+        { "slug": "fg", "name": "Foreground", "color": "#111111" },
+        { "slug": "muted", "name": "Muted", "color": "#6b7280" },
+        { "slug": "primary", "name": "Primary", "color": "#2563eb" },
+        { "slug": "accent", "name": "Accent", "color": "#10b981" }
+      ]
     }
   },
   "custom": {
@@ -15,13 +33,22 @@
       "gap-large": "3rem"
     }
   },
-  "styles": {},
+  "styles": {
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--system-ui)"
+    },
+    "elements": {
+      "link": {
+        "typography": { "fontWeight": "600" }
+      }
+    }
+  },
   "templateParts": [
     { "name": "footer-top", "title": "Footer Top", "area": "footer" },
     { "name": "footer", "title": "Footer", "area": "footer" }
   ],
   "customTemplates": [
-    { "name": "no-sidebar", "title": "No sidebar", "postTypes": ["page", "post"] }
+    { "name": "no-sidebar", "title": "No sidebar", "postTypes": ["page","post"] }
   ],
   "patterns": []
 }
