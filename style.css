@@ -559,39 +559,37 @@ a { font-weight: 600; } /* fallback globale */
 
 /* RIMOSSI: vecchi riferimenti a gap: var(--wp--custom--flex--gap,2rem); */
 
-/* Variabili header (fallback) */
+/* Default header height variable (solo riferimento, non forzata */
 :root {
-  --flixbe-header-height: var(--wp--custom--header--height,80px);
-  --flixbe-header-height-mobile: var(--wp--custom--header--height-mobile,64px);
-  --flixbe-header-height-scrolled: var(--wp--custom--header--scrolled-height,70px);
+  --flixbe-header-height: 80px;
 }
 
+/* Header: niente height fissa */
 .site-header {
-  height: var(--flixbe-header-height);
+  /* height: var(--flixbe-header-height);  REMOVED */
+  /* min-height opzionale se vuoi un minimo: decommenta la riga sotto */
+  /* min-height: var(--flixbe-header-height); */
   display: flex;
   align-items: center;
 }
 
+/* Stato scrolled: rimosso override height */
+/*
+.site-header.is-scrolled { height: var(--flixbe-header-height-scrolled); }
+*/
+
+/* Body offset: se vuoi togliere il compenso fisso rimuovi questa proprietà */
+body {
+  /* padding-top: var(--flixbe-header-height);  REMOVED */
+}
+
+/* Mobile: rimosse le altezze */
 @media (max-width:782px){
   .site-header {
-    height: var(--flixbe-header-height-mobile);
+    /* height: var(--flixbe-header-height-mobile);  REMOVED */
+    /* min-height: var(--flixbe-header-height-mobile); (opzionale) */
   }
-}
-
-.site-header.is-scrolled {
-  height: var(--flixbe-header-height-scrolled);
-}
-
-body {
-  padding-top: var(--flixbe-header-height);
-}
-@media (max-width:782px){
   body {
-    padding-top: var(--flixbe-header-height-mobile);
+    /* padding-top: var(--flixbe-header-height-mobile); REMOVED */
   }
-}
-
-body.admin-bar .site-header { top:32px; }
-@media (max-width:782px){
-  body.admin-bar .site-header { top:46px; }
 }
