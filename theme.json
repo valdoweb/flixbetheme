@@ -6,47 +6,16 @@
     "layout": {
       "contentSize": "1000px",
       "wideSize": "1400px"
-    },
-    "spacing": {
-      "units": ["px", "rem", "em", "vh", "vw", "%"]
-    },
-    "color": {
-      "palette": [
-        { "slug": "bg", "name": "Background", "color": "#ffffff" },
-        { "slug": "fg", "name": "Foreground", "color": "#111111" },
-        { "slug": "muted", "name": "Muted", "color": "#6b7280" },
-        { "slug": "primary", "name": "Primary", "color": "#2563eb" },
-        { "slug": "accent", "name": "Accent", "color": "#10b981" }
-      ]
-    },
-    "typography": {
-      "fontFamilies": [
-        {
-          "slug": "system-ui",
-          "name": "System UI",
-          "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif"
-        }
-      ]
-    },
-    "blocks": {
-      "core/group": { "layout": { "inherit": false } },
-      "core/columns": { "layout": { "inherit": false } },
-      "core/cover": { "layout": { "inherit": false } },
-      "core/query": { "layout": { "inherit": false } },
-      "core/post-template": { "layout": { "inherit": false } }
     }
   },
-  "styles": {
-    "color": { "text": "var(--wp--preset--color--fg)" },
-    "typography": {
-      "fontFamily": "var(--wp--preset--font-family--system-ui)"
-    },
-    "elements": {
-      "link": {
-        "typography": { "fontWeight": "600" }
-      }
+  "custom": {
+    "flex": {
+      "gap": "2rem",
+      "gap-small": "1rem",
+      "gap-large": "3rem"
     }
   },
+  "styles": {},
   "templateParts": [
     { "name": "footer-top", "title": "Footer Top", "area": "footer" },
     { "name": "footer", "title": "Footer", "area": "footer" }

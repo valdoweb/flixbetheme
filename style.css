@@ -531,3 +531,17 @@ a { font-weight: 600; } /* fallback globale */
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
+
+/* Usa variabile custom per i gap flex */
+.site-header .wp-block-navigation .wp-block-navigation__container {
+  gap: var(--wp--custom--flex--gap,2rem);
+}
+
+.blog .wp-block-post-template {
+  gap: var(--wp--custom--flex--gap,2rem);
+}
+
+/* Variante (se serve più compatto) */
+.blog.compact .wp-block-post-template {
+  gap: var(--wp--custom--flex--gap-small,1rem);
+}
