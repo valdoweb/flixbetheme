@@ -32,6 +32,17 @@ function flixbe_enqueue_assets() {
 }
 add_action('wp_enqueue_scripts', 'flixbe_enqueue_assets');
 
+add_action('wp_enqueue_scripts', function () {
+  $ver = wp_get_theme()->get('Version');
+  wp_enqueue_script(
+    'flixbe-header-offset',
+    get_theme_file_uri('/assets/js/header-offset.js'),
+    [],
+    $ver,
+    true
+  );
+});
+
 // Optional: add defer attribute (not needed since in footer)
 function flixbe_defer_script( $tag, $handle, $src ) {
     if ( 'flixbe-header-scroll' === $handle ) {
