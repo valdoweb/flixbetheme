@@ -2,10 +2,16 @@
   function applyHeaderOffset() {
     var header = document.querySelector('.site-header');
     if (!header) return;
-    var cs = window.getComputedStyle(header);
-    var top = parseFloat(cs.top) || 0;          // accounts for admin bar offset (32px/46px)
-    var height = header.offsetHeight || 0;      // current header height
-    document.body.style.paddingTop = (top + height) + 'px';
+
+    // Header bottom relative to viewport (includes any CSS top on header)
+    var bottom = header.getBoundingClientRect().bottom;
+
+    // Subtract WP admin bar height (if present) to avoid double offset
+    var adminBar = document.getElementById('wpadminbar');
+    var adminH = adminBar ? adminBar.offsetHeight : 0;
+
+    var pad = Math.max(0, bottom - adminH);
+    document.body.style.paddingTop = pad + 'px';
   }
 
   var scheduled;
