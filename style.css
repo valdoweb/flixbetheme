@@ -84,7 +84,7 @@ body.admin-bar .site-header { top:32px; }
 .site-branding .wp-block-site-logo img {
   display:block;
   height:auto;
-  transition: transform 360ms cubic-bezier(.2,.7,.2,1);
+  transition: transform 520ms cubic-bezier(.16,.84,.24,1);
   will-change: transform;
 }
 .site-branding .wp-block-site-logo ~ .wp-block-site-title { display:none; }
