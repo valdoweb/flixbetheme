@@ -196,7 +196,7 @@ body.admin-bar .site-header { top:32px; }
 .site-footer p { margin:0; }
 
 /* Search */
-.wp-block-search { max-width:400px; margin:2rem auto; }
+.wp-block-search { max-width:400px; margin:1rem auto; }
 .wp-block-search__input {
   border-radius:.75rem;
   border:2px solid var(--wp--preset--color--primary);
@@ -419,7 +419,7 @@ main.alignwide > .wp-block-post-featured-image img { display: block; width: 100%
 /* Form elements */
 input, textarea, select {
   border:2px solid var(--wp--preset--color--muted);
-  padding:.75rem;
+  padding:0;
   border-radius:.5rem;
   font-size:1rem;
   line-height:1.5;
