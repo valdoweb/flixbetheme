@@ -503,6 +503,8 @@ button:disabled,a[aria-disabled="true"] { opacity:.6; cursor:not-allowed; }
 /* Global: tutti i link 500 (fallback se il theme.json non è caricato) */
 /* Fallback: tutti i link semi-bold (se il theme.json non è caricato) */
 a { font-weight: 600; } /* fallback globale */
+a { color: #000; }
+a:hover, a:focus { color: #000; }
 
 /* Home: griglia articoli 3 / 2 / 1 colonne */
 .blog .wp-block-post-template {
