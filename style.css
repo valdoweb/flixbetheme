@@ -46,7 +46,7 @@ body.admin-bar { padding-top:0; }
 }
 .site-header.is-scrolled * {
   min-height: 0 !important;
-  margin: 0! important;
+  margin: 0 !important;
 }
 
 .site-header.is-scrolled .wp-block-site-logo img {
