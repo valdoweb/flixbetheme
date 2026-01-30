@@ -640,13 +640,6 @@ a { font-weight: 600; } /* fallback globale */
 .wp-site-blocks > *:nth-child(3) { animation-delay: 80ms; }
 .wp-site-blocks > *:nth-child(4) { animation-delay: 120ms; }
 
-/* Keep fixed header/footer stable for offset calculations */
-.wp-site-blocks > .site-header,
-.wp-site-blocks > .site-footer {
-  animation: none;
-  transform: none;
-}
-
 /* Griglia articoli (blog) */
 .blog .wp-block-post-template {
   column-gap: var(--wp--custom--flex--gap-x, 2rem);
